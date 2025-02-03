@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>  
+<html>  
+	<head>  
+		<title>Portfolio - Home</title>  
+		<meta charset="utf-8" />  
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+		<link rel="stylesheet" href="assets/css/main.css" />  
+		<style>  
+			/* Reduce la altura de la primera sección (#top) */  
+			#top {  
+				min-height: 50vh; /* Ocupa media página */  
+				display: flex; /* Usar Flexbox para alinear */  
+				align-items: center; /* Centrar verticalmente */  
+				justify-content: space-between; /* Espaciado entre elementos */  
+				padding: 20px 0; /* Espaciado interno */  
+			}  
+
+			/* Ajusta el tamaño de imagen proporcionalmente */  
+			#top .image.fit img {  
+				max-width: 80%; /* Reducir proporcionalmente */  
+				height: auto; /* Mantiene proporciones */  
+				margin: 0 auto; /* Centrar imagen */  
+				display: block; /* Asegura el centrado */  
+			}  
+
+			/* Ajustar el texto H1 para que sea más compacto */  
+			#top header h1 {  
+				font-size: 2.5rem; /* Tamaño personalizado */  
+				line-height: 1.4; /* Espaciado entre líneas compacto */  
+				margin-bottom: 15px; /* Espaciado inferior */  
+				font-weight: bold; /* Peso del texto */  
+			}  
+
+			/* Ajustar el texto del párrafo en #top */  
+			#top p {  
+				font-size: 1.4rem; /* Tamaño personalizado */  
+				line-height: 1.8rem; /* Mejora el espaciado para legibilidad */  
+				font-weight: 400; /* Regular peso de la fuente */  
+				margin-top: 10px; /* Espaciado superior */  
+			}  
+
+			/* Mover la sección de Proyectos hacia arriba */  
+			.style1 + .style2 {  
+				margin-top: -40px; /* Ajuste más sutil */  
+			}  
+
+			/* Reducir espacio entre el título Projects y la línea divisora */  
+			#work header h2 {  
+				margin-top: 5px; /* Espaciado superior más reducido */  
+				margin-bottom: 15px; /* Ajuste inferior */  
+			}  
+
+			/* Texto descriptivo debajo del título */  
+			#work header p {  
+				font-size: 1.2rem; /* Tamaño del texto descriptivo */  
+				margin-bottom: 25px; /* Espaciado inferior por defecto */  
+			}  
+
+			/* Ajuste de los encabezados dentro de los proyectos */  
+			.box.style1 h3 {  
+				font-size: 1.5rem; /* Tamaño de los títulos de proyectos */  
+				font-weight: 600; /* Semi-negrita */  
+				margin-bottom: 10px; /* Espaciado inferior */  
+			}  
+
+			/* Ajustar los párrafos dentro de cada proyecto */  
+			.box.style1 p {  
+				font-size: 1rem; /* Ajuste dentro de los proyectos */  
+				line-height: 1.5rem;  
+				margin-bottom: 15px; /* Espacio entre detalles */  
+			}  
+		</style>  
+	</head>  
+	<body class="is-preload">  
+
+		<!-- Nav -->  
+		<nav id="nav">  
+			<ul class="container">  
+				<li><a href="#top">Josadac Orozco Rivera</a></li>  
+				<li><a href="#work">Projects</a></li>  
+				<li><a href="#contact">Contact Me</a></li>  
+			</ul>  
+		</nav>  
+
+		<!-- Presentación / Introducción -->  
+		<article id="top" class="wrapper style1">  
+			<div class="container">  
+				<div class="row">  
+					<!-- Imagen principal -->  
+					<div class="col-4 col-5-large col-12-medium">  
+						<span class="image fit"><img src="images/rocket.jpg" alt="Rocket Image" /></span>  
+					</div>  
+
+					<!-- Texto de introducción -->  
+					<div class="col-8 col-7-large col-12-medium">  
+						<header>  
+							<h1>Hi. I'm <strong>Josadac Orozco Rivera</strong>.</h1>  
+						</header>  
+						<p>I am a 4th year <strong>Mechanical Engineer</strong> student at CETYS University with a passion in mechanical design & manufacturing, where I constantly learn through projects that push my knowledge in this field.</p>  
+					</div>  
+				</div>  
+			</div>  
+		</article>  
+
+		<!-- Work -->  
+		<article id="work" class="wrapper style2">  
+			<div class="container">  
+				<header>  
+					<h2>PROJECTS</h2>  
+					<p>Click on a project to learn more.</p>  
+				</header>  
+
+				<!-- First Row -->  
+				<div class="row aln-center" style="margin-bottom: 30px;">  
+					<div class="col-6 col-12-medium">  
+						<section class="box style1">  
+							<a href="proyecto1.html">  
+								<span class="image fit"><img src="images/P1.jpg" alt="3D-Printed Aircraft" width="300" height="350"/></span>  
+							</a>
+						</p>  
+							<h3>CSU 3D-Printed Fixed-Wing Aircraft Competition (2023, 2024, 2025)</h3>  
+							<p>Cal State LA aeronautical design competition that consists in achieving the most airborne time for a 3D printed aicraft.</p>  
+						</section>  
+					</div>
+					<div class="col-6 col-12-medium">  
+						<section class="box style1">  
+							<a href="proyecto2.html">  
+							<span class="image fit"><img src="images/arliss_portada.jpg" alt="3D-Printed Aircraft" width="300" height="350" /></span>  
+							</a>
+						</p>  
+							<h3>ARLISS Competition (2022 & 2023)</h3>  
+							<p>International Competition that consists of creating a rover that will be launched 4 miles into the air, deploy a parachute and navigate across the dessert to a waypoint..</p>  
+						</section>  
+					</div>  
+				</div>  
+
+				<!-- Second Row -->  
+				<div class="row aln-center">  
+					<div class="col-6 col-12-medium">  
+						<section class="box style1">  
+							<a href="proyecto3.html">
+								<span class="image fit"><img src="images/rocket_portada.jpeg" alt="3D-Printed Aircraft" width="300" height="350" /></span>  
+							</a>
+						</p>  
+							<h3>High Power Rocket Development for Tripolli Certification (2023) </h3>  
+							<p>A high power rocketry certification achieved by designing and manufacturing a composite material rocket.</p>  
+						</section>  
+					</div>  
+					<div class="col-6 col-12-medium">  
+						<section class="box style1">  
+							<a href="proyecto4.html">
+							<span class="image fit"><img src="images/suas.jpeg" alt="3D-Printed Aircraft" width="300" height="350"/></span>  
+							</a>
+						</p>  	
+							<h3>UAV (Work in progress for SUAS competition 2025)</h3>  
+							<p>The Student Unmanned Aerial Systems competition puts to the test UAVs in their capacities to fly autonomosly and air drop packages with precision.</p>  
+						</section>  
+					</div>  
+				</div>  
+
+				<footer>  
+					<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>  
+				</footer>  
+			</div>  
+		</article>  
+
+		<!-- Contact -->  
+		<article id="contact" class="wrapper style4">  
+			<div class="container medium">  
+				<header>  
+					<h2>Get in Touch</h2>  
+					<p>Contact me for collaborations or inquiries.</p>  
+				</header>  
+				<div class="row">  
+					<div class="col-12">  
+						<form method="post" action="#">  
+							<div class="row">  
+								<div class="col-6 col-12-small">  
+									<input type="text" name="name" id="name" placeholder="Name" />  
+								</div>  
+								<div class="col-6 col-12-small">  
+									<input type="text" name="email" id="email" placeholder="Email" />  
+								</div>  
+								<div class="col-12">  
+									<input type="text" name="subject" id="subject" placeholder="Subject" />  
+								</div>  
+								<div class="col-12">  
+									<textarea name="message" id="message" placeholder="Message"></textarea>  
+								</div>  
+								<div class="col-12">  
+									<ul class="actions">  
+										<li><input type="submit" value="Send Message" /></li>  
+										<li><input type="reset" value="Clear Form" class="alt" /></li>  
+									</ul>  
+								</div>  
+							</div>  
+						</form>  
+					</div>  
+				</div>  
+			</div>  
+		</article>  
+
+		<!-- Scripts -->  
+		<script src="assets/js/jquery.min.js"></script>  
+		<script src="assets/js/jquery.scrolly.min.js"></script>  
+		<script src="assets/js/browser.min.js"></script>  
+		<script src="assets/js/breakpoints.min.js"></script>  
+		<script src="assets/js/util.js"></script>  
+		<script src="assets/js/main.js"></script>  
+
+	</body>  
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>  
+<html>  
+	<head>  
+		<title>Project 1 - Details</title>  
+		<meta charset="utf-8" />  
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+		<link rel="stylesheet" href="assets/css/main.css" />  
+		<style>  
+			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+			p, h4 {  
+				text-align: left;  
+				color: black; /* Set text color to black */  
+			}  
+
+			/* Ensure all text on the page is black */  
+			body {  
+				color: black;  
+			}  
+
+			.center {  
+				text-align: center;  
+			}  
+
+			.image-large {  
+				display: block;  
+				margin: 20px auto;  
+				width: 80%; /* Ajusta el tamaño según sea necesario */  
+			}  
+
+			/* Subtítulos principales (Description, My Contribution, Results) */  
+			h3 {  
+				font-size: 1.8em;  
+				font-weight: bold;  
+				color: black;  
+			}  
+
+			/* Subtítulos más grandes en Subtítulos secundarios */  
+			.col-12 h4 {  
+				font-size: 1.5em;  
+				margin-bottom: 20px; /* Espacio adicional debajo de los subtítulos */  
+			}  
+
+			/* Espaciado extra entre imágenes y el siguiente subtítulo */  
+			.row img {  
+				margin-bottom: 30px;  
+			}  
+
+			/* Espaciado adicional entre subtítulos siguientes (h4) y contenido previo */  
+			h4 {  
+				margin-top: 20px;  
+			}  
+
+			/* Alineación horizontal entre texto e imágenes en las secciones */  
+			.row {  
+				display: flex;  
+				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+			}  
+
+			.row img {  
+				position: relative;  
+				top: +10px; /* Subimos ligeramente la imagen para alinearla con el texto */  
+				margin: 0; /* Eliminamos márgenes externos */   
+			}  
+
+			/* Espaciado dentro de la sección */  
+			.row > .col-4, .row > .col-8 {  
+				padding: 10px;  
+			}  
+		</style>  
+	</head>  
+	<body class="is-preload">  
+		<!-- Nav -->  
+		<nav id="nav">  
+			<ul class="container">  
+				<li><a href="index.html#top">Josadac Orozco Rivera</a></li>  
+				<li><a href="index.html#work">Projects</a></li>  
+				<li><a href="index.html#contact">Contact Me</a></li>  
+			</ul>  
+		</nav>  
+
+		<!-- Project -->  
+		<article id="project1" class="wrapper style2">  
+			<div class="container">  
+				<header class="center">  
+					<h2>CSU 3D-Printed Fixed-Wing Aircraft Competition (2023, 2024, 2025)</h2>  
+					<p>Aircraft Design & Manufacturing Lead.</p>  
+				</header>  
+
+				<img src="images/calstate.jpg" alt="Aircraft Image" class="image-large" />  
+
+				<!-- Subtitle 1 -->  
+				<section class="row center">  
+					<div class="col-12">  
+						<h3><strong>Description</strong></h3>  
+						<p>3DPAC is a aeronautical design competition that takes place in the State LA campus, where undergraduate students are challenged with designing, building and flying a 3D printed aircraft. The planes need to be lightweight, and the designs need to maximize performance given manufacturing and material constraints.</p>  
+					</div>  
+				</section>  
+
+				<hr /> <!-- Línea divisora entre Description y My Contribution -->  
+
+				<!-- Subtitle 2 -->  
+				<section class="row">  
+					<div class="col-12">  
+						<h3><strong>My Contribution</strong></h3>  
+						  
+						<!-- Sub-subtitle 1 -->  
+						<h4>Team Leader</h4>  
+						<div class="row">  
+							<div class="col-4">  
+								<img src="images/leader.jpeg" alt="Team Leader Image" class="image fit" width="300" height="270" />  
+							</div>  
+							<div class="col-8">  
+								<p>Led a team of six students from various fields, including mechanical engineering and mechatronics, in organizing the research, design, manufacturing, and testing stages to make the best use of the team’s skills and time. Also focused on managing resources effectively and finding ways to promote the project to attract additional sponsors and support.</p>  
+							</div>  
+						</div>  
+
+						<!-- Sub-subtitle 2 -->  
+						<h4>Aicraft Dimensioning & Aerodesign</h4>  
+						<div class="row">  
+							<div class="col-4">  
+								<img src="images/draft.png" alt="Aerodesign Image" class="image fit"  />  
+							</div>  
+							<div class="col-8">  
+								<p>Created the first draft of how aircraft would be sized, applying aeronautical fundamentals to ensure wing geometry generated the most lift. Iterated using XFLR5 to obtain the most efficient airfoil.</p>  
+							</div>  
+						</div>  
+
+						<!-- Sub-subtitle 3 -->  
+						<h4>CAD Design for Additive Manufacturing</h4>  
+						<div class="row">  
+							<div class="col-4">  
+								<img src="images/wireframe.PNG" alt="CAD Design Image" class="image fit" />  
+							</div>  
+							<div class="col-8">  
+								<p>Designed the aircraft in Solidworks, including wings, tail section, and fuselage. Due to the nature of 3D printing, internal wing geometry was manually designed and tested to reduce weight while ensuring structural integrity.</p>  
+							</div>  
+						</div>  
+
+						<!-- Sub-subtitle 4 -->  
+						<h4>Slicer Fine-tuning</h4>  
+						<div class="row">  
+							<div class="col-4">  
+								<img src="images/slicer.png" alt="Slicer Fine-tuning Image" class="image fit" />  
+							</div>  
+							<div class="col-8">  
+								<p>Fine-tuned Prusaslicer parameters to obtain the best quality prints, e.g., flow rate, layer height, seam position, travel and layer speed, etc.</p>  
+							</div>  
+						</div>  
+					</div>  
+				</section>  
+
+				<section class="row">  
+					<div class="col-12">  
+						<h3><strong>Results</strong></h3>  
+						<p>The project successfully produced a lightweight, efficient aircraft that performed exceptionally well during competition, achieving top rankings in both design and flight performance categories. The team also gained valuable experience in aeronautical design and additive manufacturing techniques.</p>  
+
+						<!-- Sub-subtitle 1 -->  
+						<h4>Design Performance</h4>  
+						<div class="row">  
+							<div class="col-4">  
+								<img src="images/design_performance.jpg" alt="Design Performance Image" class="image fit" />  
+							</div>  
+							<div class="col-8">  
+								<p>Details about the design performance, including metrics and key achievements during the competition.</p>  
+							</div>  
+						</div>  
+
+						<!-- Sub-subtitle 2 -->  
+						<h4>Flight Achievements</h4>  
+						<div class="row">  
+							<div class="col-4">  
+								<img src="images/flight_achievements.jpg" alt="Flight Achievements Image" class="image fit" />  
+							</div>  
+							<div class="col-8">  
+								<p>Highlights of the flight performance, showcasing the aircraft's capabilities and results achieved during the competition.</p>  
+							</div>  
+						</div>  
+					</div>  
+				</section>  
+			</div>  
+		</article>  
+
+		<!-- Scripts -->  
+		<script src="assets/js/jquery.min.js"></script>  
+		<script src="assets/js/jquery.scrolly.min.js"></script>  
+		<script src="assets/js/browser.min.js"></script>  
+		<script src="assets/js/breakpoints.min.js"></script>  
+		<script src="assets/js/util.js"></script>  
+		<script src="assets/js/main.js"></script>  
+	</body>  
+</html>
