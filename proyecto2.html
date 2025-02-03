@@ -1,87 +1,165 @@
 <!DOCTYPE HTML>  
 <html>  
 	<head>  
-		<title>Project 1 - Details</title>  
+		<title>Project 2 - Details</title>  
 		<meta charset="utf-8" />  
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
 		<link rel="stylesheet" href="assets/css/main.css" />  
+		<style>  
+			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+			p, ul li {  
+				text-align: left;  
+				color: black; /* Set text color to black */  
+			}  
+
+			/* Ensure all text on the page is black */  
+			body {  
+				color: black;  
+			}  
+
+			.center {  
+				text-align: center;  
+			}  
+
+			.image-large {  
+				display: block;  
+				margin: 20px auto;  
+				width: 80%; /* Ajusta el tamaño según sea necesario */  
+			}  
+
+			/* Subtítulos principales (Description, My Contribution, Results) */  
+			h3 {  
+				font-size: 1.8em;  
+				font-weight: bold;  
+				color: black;  
+			}  
+
+			/* Espaciado extra entre imágenes y el siguiente contenido */  
+			.row img {  
+				margin-bottom: 30px;  
+			}  
+
+			/* Alineación horizontal entre texto e imágenes en las secciones */  
+			.row {  
+				display: flex;  
+				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+			}  
+
+			.row img {  
+				position: relative;  
+				top: +10px; /* Subimos ligeramente la imagen para alinearla con el texto */  
+				margin: 0; /* Eliminamos márgenes externos */   
+			}  
+
+			/* Espaciado dentro de la sección */  
+			.row > .col-4, .row > .col-8 {  
+				padding: 10px;  
+			}  
+
+			/* Cambios para hacer las imágenes 50% más grandes */  
+			.image.fit {  
+				max-width: 100%; /* Asegura que la imagen no exceda el contenedor */  
+				width: 150%; /* Escala las imágenes al 150% de su tamaño original */  
+				margin: 0 auto; /* Centra las imágenes horizontalmente */  
+				display: block; /* Se comporta como bloque */  
+			}  
+		</style>  
 	</head>  
 	<body class="is-preload">  
-
 		<!-- Nav -->  
 		<nav id="nav">  
 			<ul class="container">  
-				<li><a href="index.html#top">Home</a></li>  
-				<li><a href="index.html#work">Work</a></li>  
-				<li><a href="index.html#contact">Contact</a></li>  
+				<li><a href="index.html#top">Josadac Orozco Rivera</a></li>  
+				<li><a href="index.html#work">Projects</a></li>  
+				<li><a href="index.html#contact">Contact Me</a></li>  
 			</ul>  
 		</nav>  
 
 		<!-- Project -->  
 		<article id="project1" class="wrapper style2">  
 			<div class="container">  
-				<header>  
-					<h2>Project 2: Innovative Design</h2>  
-					<p>Discover the details of this exciting project.</p>  
+				<header class="center">  
+					<h2>ARLISS Competition (2022,2023)</h2>  
+					<p style="text-align: center;">Black Rock Desert, NA</p>  
 				</header>  
 
+				<img src="images/arliss1.JPG" alt="Aircraft Image" class="image-large" />  
+
 				<!-- Subtitle 1 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle1.jpg" alt="Subtitle 1 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>1. Concept and Planning</h3>  
-						<p>Details about the planning and research behind the project. This is where ideas took shape and the foundation was laid for the final product.</p>  
+				<section class="row center">  
+					<div class="col-12">  
+						<h3><strong>Description</strong></h3>  
+						<p>ARLISS is a competition that takes place in Black Rock, Nevada, where university students from around the world design, build, and launch prototypes of satellites. The category where I participated was CanSat Comeback Competition, where the goal is to make a lightweight, all terrain rover that that will be launch from a rocket and will be ejected at an altitude of 4 km. The robot has to autonomously deploy a parachute, land and travel the dessert to a specific GPS location.</p>  
 					</div>  
 				</section>  
-				<hr />  
+
+				<hr /> <!-- Línea divisora entre Description y My Contribution -->  
 
 				<!-- Subtitle 2 -->  
 				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle2.jpg" alt="Subtitle 2 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>2. Design and Development</h3>  
-						<p>The design process was iterative, involving prototyping, testing, and refining. Learn about how the team brought this to life.</p>  
+					<div class="col-12">  
+						<h3><strong>Mechanical Design Lead</strong></h3>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/arliss_lead.JPEG" alt="Team Leader Image"  width="550" height="370" />  
+							</div>  
+							<div class="col-5">  
+								<p>Under the engineering student group "Quantum", I contributed to the project as the mechanical design lead, organizing project timeline and tasks while onboarding 5 team members with weekly meetings and tasks to perform. </p>  
+								<ul>  
+									<li>Design desicion making for chasis geometry and materials selection. </li>  
+									<li>Secured sponsorships and funding for the project.</li>  
+									<li>Onboarded team members on weekly meetings.</li>  
+								</ul>  
+							</div>  
+						</div>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/rover_render.jpg" alt="Aerodesign Image" class="image fit"  />  
+							</div>  
+							<div class="col-6">  
+								<p>Design & manufacture mechanical structure for rover, while taking into account strict  weight and sizing limitations. Structure needed to survive a 40g acceleration ,while protecting electronical components. Utilized CNC, miling and tuning to create 1060 alloy chassis</p>  
+								<ul>  
+									<li>Weight & size limitations were given by available payload volume of rocket and maximum launch weight.</li>  
+									<li>40g acceleration was excerted by payload separation explosion..</li>  
+									<li>Electrical components consistes of: </li>  
+								</ul>  
+							</div>  
+						</div>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/arliss2.jpg" alt="CAD Design Image" width="590" height="470" />  
+							</div>  
+							<div class="col-6">  
+								<p>Design rover all-terrain wheels and coupling, for navigation of rough terrain in the BlackRock Desert, while taking into account the capacity to protect electronical components in a 10 foot free fall drop. Utilized CAD and laser cuter to achieve desired geometry.</p>  
+								<ul>  
+									<li>Wheels needed to be lightweight, shock absorbant and all terrian capable. Ethylene-vinyl acetate foam was chosen due to its properties and ease of manufacturability with laser cuter.</li>  
+									<li>In final landing touchdown, rover would suffer a 10 foot free fall to make sure parachute did not interfere with navigation.</li>  
+									
+								</ul>  
+							</div>  
+						</div>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/arliss3.jpg" alt="Slicer Fine-tuning Image" class="image fit" />  
+							</div>  
+							<div class="col-6">  
+								<p>Design of auto-retractable stabilizing support for rover. Rover needed to have a stabilizing support that could be retracted and auto deployed when exiting payload bay. 
+								</p>  
+								
+							</div>  
+						</div>  
 					</div>  
 				</section>  
-				<hr />  
 
-				<!-- Subtitle 3 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle3.jpg" alt="Subtitle 3 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>3. Challenges and Solutions</h3>  
-						<p>Explore some of the key challenges encountered and how innovative solutions helped overcome them.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Subtitle 4 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle4.jpg" alt="Subtitle 4 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>4. Final Outcomes</h3>  
-						<p>Learn about the results of the project and the implications for future work or applications.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Video -->  
 				<section class="row">  
 					<div class="col-12">  
-						<h3>Project Walkthrough</h3>  
-						<p>Watch a detailed walkthrough of the project and learn more about its key features and highlights.</p>  
-						<video controls width="100%">  
-							<source src="videos/project1.mp4" type="video/mp4">  
-							Your browser does not support the video tag.  
-						</video>  
+						<h3><strong>Results</strong></h3>  
+						<p>-.  
+							</p>  
 					</div>  
 				</section>  
 			</div>  
@@ -94,6 +172,5 @@
 		<script src="assets/js/breakpoints.min.js"></script>  
 		<script src="assets/js/util.js"></script>  
 		<script src="assets/js/main.js"></script>  
-
 	</body>  
 </html>

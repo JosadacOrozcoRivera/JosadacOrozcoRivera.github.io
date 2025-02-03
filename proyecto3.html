@@ -1,89 +1,157 @@
 <!DOCTYPE HTML>  
 <html>  
 	<head>  
-		<title>Project 1 - Details</title>  
+		<title>Project 2 - Details</title>  
 		<meta charset="utf-8" />  
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
 		<link rel="stylesheet" href="assets/css/main.css" />  
+		<style>  
+			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+			p, ul li {  
+				text-align: left;  
+				color: black; /* Set text color to black */  
+			}  
+
+			/* Ensure all text on the page is black */  
+			body {  
+				color: black;  
+			}  
+
+			.center {  
+				text-align: center;  
+			}  
+
+			.image-large {  
+				display: block;  
+				margin: 20px auto;  
+				width: 80%; /* Ajusta el tamaño según sea necesario */  
+			}  
+
+			/* Subtítulos principales (Description, My Contribution, Results) */  
+			h3 {  
+				font-size: 1.8em;  
+				font-weight: bold;  
+				color: black;  
+			}  
+
+			/* Espaciado extra entre imágenes y el siguiente contenido */  
+			.row img {  
+				margin-bottom: 30px;  
+			}  
+
+			/* Alineación horizontal entre texto e imágenes en las secciones */  
+			.row {  
+				display: flex;  
+				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+			}  
+
+			.row img {  
+				position: relative;  
+				top: +10px; /* Subimos ligeramente la imagen para alinearla con el texto */  
+				margin: 0; /* Eliminamos márgenes externos */   
+			}  
+
+			/* Espaciado dentro de la sección */  
+			.row > .col-4, .row > .col-8 {  
+				padding: 10px;  
+			}  
+
+			/* Cambios para hacer las imágenes 50% más grandes */  
+			.image.fit {  
+				max-width: 100%; /* Asegura que la imagen no exceda el contenedor */  
+				width: 150%; /* Escala las imágenes al 150% de su tamaño original */  
+				margin: 0 auto; /* Centra las imágenes horizontalmente */  
+				display: block; /* Se comporta como bloque */  
+			}  
+		</style>  
 	</head>  
 	<body class="is-preload">  
-
 		<!-- Nav -->  
 		<nav id="nav">  
 			<ul class="container">  
-				<li><a href="index.html#top">Home</a></li>  
-				<li><a href="index.html#work">Work</a></li>  
-				<li><a href="index.html#contact">Contact</a></li>  
+				<li><a href="index.html#top">Josadac Orozco Rivera</a></li>  
+				<li><a href="index.html#work">Projects</a></li>  
+				<li><a href="index.html#contact">Contact Me</a></li>  
 			</ul>  
 		</nav>  
 
 		<!-- Project -->  
 		<article id="project1" class="wrapper style2">  
 			<div class="container">  
-				<header>  
-					<h2>Project 3: Innovative Design</h2>  
-					<p>Discover the details of this exciting project.</p>  
+				<header class="center">  
+					<h2>High Power Rocket Development for Tripolli Certification (2023)</h2>  
+					<p style="text-align: center;">Black Rock Desert, NA</p>  
 				</header>  
 
+				<img src="images/rocket2.JPEG" alt="Aircraft Image" class="image-large" />  
+
 				<!-- Subtitle 1 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle1.jpg" alt="Subtitle 1 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>1. Concept and Planning</h3>  
-						<p>Details about the planning and research behind the project. This is where ideas took shape and the foundation was laid for the final product.</p>  
+				<section class="row center">  
+					<div class="col-12">  
+						<h3><strong>Description</strong></h3>  
+						<p>ARLISS is a competition that takes place in Black Rock, Nevada, where university students from around the world design, build, and launch prototypes of satellites. The category where I participated was CanSat Comeback Competition, where the goal is to make a lightweight, all terrain rover that that will be launch from a rocket and will be ejected at an altitude of 4 km. The robot has to autonomously deploy a parachute, land and travel the dessert to a specific GPS location.</p>  
 					</div>  
 				</section>  
-				<hr />  
+
+				<hr /> <!-- Línea divisora entre Description y My Contribution -->  
 
 				<!-- Subtitle 2 -->  
 				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle2.jpg" alt="Subtitle 2 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>2. Design and Development</h3>  
-						<p>The design process was iterative, involving prototyping, testing, and refining. Learn about how the team brought this to life.</p>  
+					<div class="col-12">  
+						<h3><strong>My Contribution</strong></h3>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/openrocket.png" alt="Team Leader Image"  width="590" height="370" />  
+							</div>  
+							<div class="col-6">  
+								<p>Under the engineering student group "Quantum", I contributed to the project as a team member in researching, testing and implementing the necessary manufacturing techniques to construct and assemble a glass reinforced epoxy rocket.</p>  
+								<p>Design through OpenRocket software for calculating center of mass, center of pressure, weight distribution, motor selection and conducting flight simulations to ensure a stable launch and landing.</p>  
+							</div>  
+						</div>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/rocket4.png" alt="Aerodesign Image" class="image fit"  />  
+							</div>  
+							<div class="col-6">  
+								<p>Through a process of trial and error, I was able to identify certain deficiencies in the manufacturing process and successfully proposed and implemented changes to mitigate them.</p>  
+							</div>  
+						</div>  
+
 					</div>  
 				</section>  
-				<hr />  
 
-				<!-- Subtitle 3 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle3.jpg" alt="Subtitle 3 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>3. Challenges and Solutions</h3>  
-						<p>Explore some of the key challenges encountered and how innovative solutions helped overcome them.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Subtitle 4 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle4.jpg" alt="Subtitle 4 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>4. Final Outcomes</h3>  
-						<p>Learn about the results of the project and the implications for future work or applications.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Video -->  
 				<section class="row">  
 					<div class="col-12">  
-						<h3>Project Walkthrough</h3>  
-						<p>Watch a detailed walkthrough of the project and learn more about its key features and highlights.</p>  
-						<video controls width="100%">  
-							<source src="videos/project1.mp4" type="video/mp4">  
+						<h3><strong>Results</strong></h3>  
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/rocket_results.png" alt="CAD Design Image" width="590" height="470" />  
+							</div>  
+							<div class="col-6">  
+								<p><strong>Success!</strong> The launch took place over laguna salada in Mexicali, B.C, Mexico. The flight passed with flying colors all certification criteria established by Tripolli Rocketry Association.</p>  
+								<ul>   
+									<li>Rocket didnt explode. Happens more often than one might think. If materials are not chosen correctly for sustaining high pressure and heat generated by motor ingition, the rocket would most likely explode.</li>   
+									<li>Flight trayectory. Flight path needed to be straight up, no sudden turns or trayectory changes. This meant a good fin design and adequate CM and CP. </li>  
+									<li>Correct flight path and parachute deployment.. Parachute needed to be deployed at periapsis and not be burned by motor heat. If prarachute deployed too early it would most likely brake. If deployed too late, it wouldnt slow down rocket trayectory enough and would most likely result in a complete loss of the rocket.</li>   
+									  
+								</ul>  
+							</div>  
+						</div>  
+				</section>  
+
+				<!-- Video Section at the Bottom -->  
+				<section class="row center" style="margin-top: 50px; text-align: center;">  
+					<div class="col-12">  
+						<h3><strong>Video</strong></h3>  
+						<video controls style="margin: 0 auto; display: block; width: 30%;">  
+							<source src="videos/launch.MP4" type="video/mp4">  
 							Your browser does not support the video tag.  
 						</video>  
 					</div>  
 				</section>  
+
 			</div>  
 		</article>  
 
@@ -94,6 +162,5 @@
 		<script src="assets/js/breakpoints.min.js"></script>  
 		<script src="assets/js/util.js"></script>  
 		<script src="assets/js/main.js"></script>  
-
 	</body>  
 </html>
