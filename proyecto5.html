@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>  
+<html>  
+	<head>  
+		<title>Project 5 - Details</title>  
+		<meta charset="utf-8" />  
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+		<link rel="stylesheet" href="assets/css/main.css" />  
+		<style>  
+			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+			p, ul li {  
+				text-align: left;  
+				color: black; /* Set text color to black */  
+			}  
+
+			/* Ensure all text on the page is black */  
+			body {  
+				color: black;  
+			}  
+
+			.center {  
+				text-align: center;  
+			}  
+
+			/* Estilo para acomodar las dos imágenes una encima de la otra */  
+			.description-images {  
+				display: flex;  
+				flex-direction: column; /* Alinea las imágenes en una sola columna */  
+				gap: 20px; /* Espacio entre las imágenes */  
+				margin-right: 20px; /* Espacio entre imágenes y texto */  
+				width: 40%; /* Porcentaje del ancho que ocuparán las imágenes */  
+			}  
+
+			.description-images img {  
+				width: 100%;  
+				height: auto;  
+				border-radius: 5px;  
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+			}  
+
+			/* Contenedor principal de las imágenes y el texto */  
+			.description-container {  
+				display: flex; /* Para alinear las imágenes y el texto uno al lado del otro */  
+				align-items: flex-start; /* Asegurar la alineación superior */  
+			}  
+
+			/* Texto ajustado a la derecha */  
+			.description-text {  
+				flex: 1; /* Permitir que el texto ocupe el espacio disponible */  
+			}  
+
+			/* Subtítulos principales (Description, My Contribution, Results) */  
+			h3 {  
+				font-size: 1.8em;  
+				font-weight: bold;  
+				color: black;  
+			}  
+
+			/* Espaciado extra entre imágenes y el siguiente contenido */  
+			.row img {  
+				margin-bottom: 30px;  
+			}  
+
+			.row {  
+				display: flex;  
+				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+			}  
+		</style>  
+	</head>  
+	<body class="is-preload">  
+		<!-- Nav -->  
+		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
+			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
+				<li style="margin-right: auto;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Josadac Orozco Rivera</a></li>  
+				<div style="display: flex; gap: 15px;"> <!-- Contenedor para los enlaces alineados a la derecha -->  
+					<li><a href="index.html#work" style="color: white; text-decoration: none; font-size: 1.2rem;">Projects</a></li>  
+					<li><a href="index.html#contact" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact Me</a></li>  
+					<li><a href="cv.html" style="color: white; text-decoration: none; font-size: 1.2rem;">CV</a></li>  
+				</div>  
+			</ul>  
+		</nav>    
+
+		<!-- Project -->  
+		<article id="project1" class="wrapper style2">  
+			<div class="container">  
+				<header class="center">  
+					<h2>"Cetys Aerodesign Society" Engineering Student Club Founder (2023-2025)</h2>  
+					<p style="text-align: center;">CETYS University, Tijuana, Mx.</p>  
+				</header>  
+
+				<!-- Subtitle 1 -->  
+				<section class="description-container">  
+					<div class="description-images">  
+						<img src="images/cadis1.JPEG" alt="Aircraft Image 1" />  
+						<img src="images/cadis2.JPEG" alt="Aircraft Image 2" />  
+					</div>  
+					<div class="description-text">  
+						<h3><strong>Description</strong></h3>  
+						<p>In May 2023, I founded the "Cetys Aerodesign Society" (CADIS) engineering student club with the following objectives in mind. </p>  
+						<ul>   
+							<li><strong>Promote interest in aerospace sciences</strong> at campus, by inviting students of all faculties to join the club and participate in our activities. </li>   
+							<li>Participate as a team in <strong>aeronautic engineering competitions</strong>, fostering personal and academic growth for students. </li>  
+							<li>Be a space where students of all ages and backgrounds can interact, grow, and <strong>learn to work as a team</strong>, while applying theoretical concepts to real-world applications, acquiring a deeper understanding of engineering fundamentals and <strong>soft skills.</strong> </li>   
+						</ul>  
+					</div>  
+				</section>  
+
+				<hr /> <!-- Línea divisoria entre Description y My Contribution -->  
+
+				<!-- Subtitle 2 -->  
+				<section class="row">  
+					<div class="col-12">  
+						<h3><strong>My Contribution</strong></h3>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/cadisfounder.jpg" alt="Team Leader Image" width="590" height="370" />  
+							</div>  
+							<div class="col-6">  
+								<p>As the founder and president of the student club, some of my responsibilities were:</p>  
+								<ul>   
+									<li>Organize the student board, appointing secretary, creative director, treasurer and team leads. </li>   
+									<li>Onboard team members on weekly meetings, discussing and assigning activities. </li>  
+									<li>Attend monthly meetings with the Student Affair Department for participation in campus-wide fund-raising activities. </li>  
+									<li>Teach use of SolidWorks and printing software to new club members for participation in the group's engineering competitions.</li>  
+									<li>Organizing club participation in <strong>volunteering work</strong>, such as Christmas events for foster children.</li>  
+								</ul>  
+							</div>  
+						</div>  
+					</div>  
+				</section>  
+
+		<!-- Scripts -->  
+		<script src="assets/js/jquery.min.js"></script>  
+		<script src="assets/js/jquery.scrolly.min.js"></script>  
+		<script src="assets/js/browser.min.js"></script>  
+		<script src="assets/js/breakpoints.min.js"></script>  
+		<script src="assets/js/util.js"></script>  
+		<script src="assets/js/main.js"></script>  
+	</body>  
+</html>

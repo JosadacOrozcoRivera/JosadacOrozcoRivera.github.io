@@ -1,13 +1,81 @@
 <!DOCTYPE HTML>  
 <html>  
 	<head>  
-		<title>Project 1 - Details</title>  
+		<title>Project 4 - Details</title>  
 		<meta charset="utf-8" />  
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
 		<link rel="stylesheet" href="assets/css/main.css" />  
+		<style>  
+			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+			p, ul li {  
+				text-align: left;  
+				color: black; /* Set text color to black */  
+			}  
+
+			/* Ensure all text on the page is black */  
+			body {  
+				color: black;  
+			}  
+
+			.center {  
+				text-align: center;  
+			}  
+
+			/* Estilo para acomodar las dos imágenes una encima de la otra */  
+			.description-images {  
+				display: flex;  
+				flex-direction: column; /* Alinea las imágenes en una sola columna */  
+				gap: 20px; /* Espacio entre las imágenes */  
+				margin-right: 20px; /* Espacio entre imágenes y texto */  
+				width: 40%; /* Porcentaje del ancho que ocuparán las imágenes */  
+			}  
+
+			.description-images img {  
+				width: 100%;  
+				height: auto;  
+				border-radius: 5px;  
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+			}  
+
+			/* Contenedor principal de las imágenes y el texto */  
+			.description-container {  
+				display: flex; /* Para alinear las imágenes y el texto uno al lado del otro */  
+				align-items: flex-start; /* Asegurar la alineación superior */  
+			}  
+
+			/* Texto ajustado a la derecha */  
+			.description-text {  
+				flex: 1; /* Permitir que el texto ocupe el espacio disponible */  
+			}  
+
+			/* Subtítulos principales (Description, My Contribution, Results) */  
+			h3 {  
+				font-size: 1.8em;  
+				font-weight: bold;  
+				color: black;  
+			}  
+
+			/* Espaciado extra entre imágenes y el siguiente contenido */  
+			.row img {  
+				margin-bottom: 30px;  
+			}  
+
+			.row {  
+				display: flex;  
+				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+			}  
+
+			/* Estilo para la imagen grande debajo de My Contribution */  
+			.large-image {  
+				width: 100%;  
+				height: auto;  
+				margin-top: 20px;  
+				border-radius: 5px;  
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+			}  
+		</style>  
 	</head>  
 	<body class="is-preload">  
-
 		<!-- Nav -->  
 		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
 			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
@@ -19,77 +87,55 @@
 				</div>  
 			</ul>  
 		</nav>    
-  
 
 		<!-- Project -->  
 		<article id="project1" class="wrapper style2">  
 			<div class="container">  
-				<header>  
-					<h2>Project 4: Innovative Design</h2>  
-					<p>Discover the details of this exciting project.</p>  
+				<header class="center">  
+					<h2>Student Unmanned Aerial Systems Competition (2025)</h2>  
+					<p style="text-align: center;">CETYS University, Tijuana, Mx.</p>  
 				</header>  
 
 				<!-- Subtitle 1 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle1.jpg" alt="Subtitle 1 Image" class="image fit" />  
+				<section class="description-container">  
+					<div class="description-images">  
+						<img src="images/suas1.jpg" alt="Aircraft Image 1" />  
 					</div>  
-					<div class="col-8">  
-						<h3>1. Concept and Planning</h3>  
-						<p>Details about the planning and research behind the project. This is where ideas took shape and the foundation was laid for the final product.</p>  
+					<div class="description-text">  
+						<h3><strong>Description</strong></h3>  
+						<p>The SUAS (Student Unmanned Aerial Systems) competition is an event aimed at promoting interest in Unmanned Aerial Systems (UAS) by engaging students in challenging missions. Teams must showcase their UAS’s ability to execute tasks such as autonomous flight, navigation, object detection, and delivery, all while adhering to strict safety and efficiency standards. </p>   
+						<p>The student group founded by the author (CADIS), is currently on track to compete in SUAS 2025.</p>   
 					</div>  
 				</section>  
-				<hr />  
+
+				<hr /> <!-- Línea divisoria entre Description y My Contribution -->  
 
 				<!-- Subtitle 2 -->  
 				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle2.jpg" alt="Subtitle 2 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>2. Design and Development</h3>  
-						<p>The design process was iterative, involving prototyping, testing, and refining. Learn about how the team brought this to life.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Subtitle 3 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle3.jpg" alt="Subtitle 3 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>3. Challenges and Solutions</h3>  
-						<p>Explore some of the key challenges encountered and how innovative solutions helped overcome them.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Subtitle 4 -->  
-				<section class="row">  
-					<div class="col-4">  
-						<img src="images/project1-subtitle4.jpg" alt="Subtitle 4 Image" class="image fit" />  
-					</div>  
-					<div class="col-8">  
-						<h3>4. Final Outcomes</h3>  
-						<p>Learn about the results of the project and the implications for future work or applications.</p>  
-					</div>  
-				</section>  
-				<hr />  
-
-				<!-- Video -->  
-				<section class="row">  
 					<div class="col-12">  
-						<h3>Project Walkthrough</h3>  
-						<p>Watch a detailed walkthrough of the project and learn more about its key features and highlights.</p>  
-						<video controls width="100%">  
-							<source src="videos/project1.mp4" type="video/mp4">  
-							Your browser does not support the video tag.  
-						</video>  
+						<h3><strong>My Contribution</strong></h3>  
+
+						<div class="row">  
+							<div class="col-6">  
+								<img src="images/suas2.png" alt="Team Leader Image" width="500" height="450" />  
+							</div>  
+							<div class="col-6">  
+								<p>As the founder and president of the student club, some of my responsibilities were:</p>  
+								<ul>   
+									<li>Conceptualized UAV, choosing adequate tail and wing configuration, according to design needs. First draft of aircraft sizing.</li>   
+									<li>Designed wings for additive manufacturing utilizing CAD.</li>  
+									<li>Printed and assembled the UAV mockup for project presentation.</li>  
+									<li>Serving as project advisor to new generation of CADIS team members, preparing to compete in SUAS 2025.</li>  
+								</ul>  
+							</div>  
+						</div>  
 					</div>  
 				</section>  
-			</div>  
-		</article>  
+
+				<!-- Space for Large Image -->  
+				<section class="large-image-section">  
+					<img src="images/uavassembly.jpg" alt="Large Image" class="large-image" />  
+				</section>  
 
 		<!-- Scripts -->  
 		<script src="assets/js/jquery.min.js"></script>  
@@ -98,6 +144,5 @@
 		<script src="assets/js/breakpoints.min.js"></script>  
 		<script src="assets/js/util.js"></script>  
 		<script src="assets/js/main.js"></script>  
-
 	</body>  
 </html>
