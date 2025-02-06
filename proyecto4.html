@@ -1,148 +1,361 @@
 <!DOCTYPE HTML>  
 <html>  
-	<head>  
-		<title>Project 4 - Details</title>  
-		<meta charset="utf-8" />  
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
-		<link rel="stylesheet" href="assets/css/main.css" />  
-		<style>  
-			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
-			p, ul li {  
-				text-align: left;  
-				color: black; /* Set text color to black */  
-			}  
+<head>  
+    <title>Project 4 - Details</title>  
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+    <link rel="stylesheet" href="assets/css/main.css" />  
+    <style>  
+        /* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+        p, ul li {  
+            text-align: left;  
+            color: black;  
+        }  
 
-			/* Ensure all text on the page is black */  
-			body {  
-				color: black;  
-			}  
+        /* Ensure all text on the page is black */  
+        body {  
+            color: black;  
+        }  
 
-			.center {  
-				text-align: center;  
-			}  
+        .center {  
+            text-align: center;  
+        }  
 
-			/* Estilo para acomodar las dos imágenes una encima de la otra */  
-			.description-images {  
-				display: flex;  
-				flex-direction: column; /* Alinea las imágenes en una sola columna */  
-				gap: 20px; /* Espacio entre las imágenes */  
-				margin-right: 20px; /* Espacio entre imágenes y texto */  
-				width: 40%; /* Porcentaje del ancho que ocuparán las imágenes */  
-			}  
+        /* Estilo para acomodar las dos imágenes una encima de la otra */  
+        .description-images {  
+            display: flex;  
+            flex-direction: column; /* Alinea las imágenes en una sola columna */  
+            gap: 20px; /* Espacio entre las imágenes */  
+            margin-right: 20px; /* Espacio entre imágenes y texto */  
+            width: 40%; /* Porcentaje del ancho que ocuparán las imágenes */  
+        }  
 
-			.description-images img {  
-				width: 100%;  
-				height: auto;  
-				border-radius: 5px;  
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-			}  
+        .description-images img {  
+            width: 100%;  
+            height: auto;  
+            border-radius: 5px;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        }  
 
-			/* Contenedor principal de las imágenes y el texto */  
-			.description-container {  
-				display: flex; /* Para alinear las imágenes y el texto uno al lado del otro */  
-				align-items: flex-start; /* Asegurar la alineación superior */  
-			}  
+        /* Contenedor principal de las imágenes y el texto */  
+        .description-container {  
+            display: flex; /* Para alinear las imágenes y el texto uno al lado del otro */  
+            align-items: flex-start; /* Asegurar la alineación superior */  
+        }  
 
-			/* Texto ajustado a la derecha */  
-			.description-text {  
-				flex: 1; /* Permitir que el texto ocupe el espacio disponible */  
-			}  
+        /* Texto ajustado a la derecha */  
+        .description-text {  
+            flex: 1; /* Permitir que el texto ocupe el espacio disponible */  
+        }  
 
-			/* Subtítulos principales (Description, My Contribution, Results) */  
-			h3 {  
-				font-size: 1.8em;  
-				font-weight: bold;  
-				color: black;  
-			}  
+        /* Subtítulos principales (Description, My Contribution, Results) */  
+        h3 {  
+            font-size: 1.8em;  
+            font-weight: bold;  
+            color: black;  
+        }  
 
-			/* Espaciado extra entre imágenes y el siguiente contenido */  
-			.row img {  
-				margin-bottom: 30px;  
-			}  
+        /* Espaciado extra entre imágenes y el siguiente contenido */  
+        .row img {  
+            margin-bottom: 30px;  
+        }  
 
-			.row {  
-				display: flex;  
-				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
-			}  
+        .row {  
+            display: flex;  
+            align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+        }  
 
-			/* Estilo para la imagen grande debajo de My Contribution */  
-			.large-image {  
-				width: 100%;  
-				height: auto;  
-				margin-top: 20px;  
-				border-radius: 5px;  
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
-			}  
-		</style>  
-	</head>  
-	<body class="is-preload">  
-		<!-- Nav -->  
-		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
-			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
-				<li style="margin-right: auto;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Josadac Orozco Rivera</a></li>  
-				<div style="display: flex; gap: 15px;"> <!-- Contenedor para los enlaces alineados a la derecha -->  
-					<li><a href="index.html#work" style="color: white; text-decoration: none; font-size: 1.2rem;">Projects</a></li>  
-					<li><a href="index.html#contact" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact Me</a></li>  
-					<li><a href="cv.html" style="color: white; text-decoration: none; font-size: 1.2rem;">CV</a></li>  
-				</div>  
-			</ul>  
-		</nav>    
+        /* Estilo para la imagen grande debajo de My Contribution */  
+        .large-image {  
+            width: 100%;  
+            height: auto;  
+            margin-top: 20px;  
+            border-radius: 5px;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+        }  
 
-		<!-- Project -->  
-		<article id="project1" class="wrapper style2">  
-			<div class="container">  
-				<header class="center">  
-					<h2>Student Unmanned Aerial Systems Competition (2025)</h2>  
-					<p style="text-align: center;">CETYS University, Tijuana, Mx.</p>  
-				</header>  
+        /* Estilos para el menú desplegable */  
+        .dropdown {  
+            position: relative;  
+            display: inline-block;  
+        }  
 
-				<!-- Subtitle 1 -->  
-				<section class="description-container">  
-					<div class="description-images">  
-						<img src="images/suas1.jpg" alt="Aircraft Image 1" />  
-					</div>  
-					<div class="description-text">  
-						<h3><strong>Description</strong></h3>  
-						<p>The SUAS (Student Unmanned Aerial Systems) competition is an event aimed at promoting interest in Unmanned Aerial Systems (UAS) by engaging students in challenging missions. Teams must showcase their UAS’s ability to execute tasks such as autonomous flight, navigation, object detection, and delivery, all while adhering to strict safety and efficiency standards. </p>   
-						<p>The student group founded by the author (CADIS), is currently on track to compete in SUAS 2025.</p>   
-					</div>  
-				</section>  
+        .dropdown-button {  
+            background-color: #222;  
+            color: white;  
+            padding: 10px;  
+            font-size: 1.2rem;  
+            border: none;  
+            cursor: pointer;  
+        }  
 
-				<hr /> <!-- Línea divisoria entre Description y My Contribution -->  
+        .dropdown-content {  
+            display: none;  
+            position: absolute;  
+            background-color: #222;  
+            min-width: 160px;  
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+            z-index: 1;  
+        }  
 
-				<!-- Subtitle 2 -->  
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>My Contribution</strong></h3>  
+        .dropdown-content a {  
+            color: white;  
+            padding: 12px 16px;  
+            text-decoration: none;  
+            display: block;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/suas2.png" alt="Team Leader Image" width="500" height="450" />  
-							</div>  
-							<div class="col-6">  
-								<p>As the founder and president of the student club, some of my responsibilities were:</p>  
-								<ul>   
-									<li>Conceptualized UAV, choosing adequate tail and wing configuration, according to design needs. First draft of aircraft sizing.</li>   
-									<li>Designed wings for additive manufacturing utilizing CAD.</li>  
-									<li>Printed and assembled the UAV mockup for project presentation.</li>  
-									<li>Serving as project advisor to new generation of CADIS team members, preparing to compete in SUAS 2025.</li>  
-								</ul>  
-							</div>  
-						</div>  
-					</div>  
-				</section>  
+        .dropdown-content a:hover {  
+            background-color: #555;  
+        }  
 
-				<!-- Space for Large Image -->  
-				<section class="large-image-section">  
-					<img src="images/uavassembly.jpg" alt="Large Image" class="large-image" />  
-				</section>  
+        .dropdown:hover .dropdown-content {  
+            display: block;  
+        }  
 
-		<!-- Scripts -->  
-		<script src="assets/js/jquery.min.js"></script>  
-		<script src="assets/js/jquery.scrolly.min.js"></script>  
-		<script src="assets/js/browser.min.js"></script>  
-		<script src="assets/js/breakpoints.min.js"></script>  
-		<script src="assets/js/util.js"></script>  
-		<script src="assets/js/main.js"></script>  
-	</body>  
+        /* Estilos para la barra de navegación de escritorio */  
+        .navbar-desktop {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            height: 60px;  
+            background-color: #222;  
+            padding: 0 150px;  
+        }  
+
+        .navbar-desktop ul {  
+            display: flex;  
+            gap: 15px;  
+            width: 100%;  
+            align-items: center;  
+            margin: 0;  
+            list-style: none;  
+            padding: 0;  
+        }  
+
+        .navbar-desktop li {  
+            margin-right: auto;  
+        }  
+
+        .navbar-desktop a {  
+            color: white;  
+            text-decoration: none;  
+            font-size: 1.2rem;  
+        }  
+
+        /* Estilos para la barra de navegación móvil */  
+        .navbar-mobile {  
+            display: none;  
+            background-color: #222;  
+            padding: 10px;  
+            height: auto;  
+            justify-content: center;  
+            align-items: center;  
+        }  
+
+        /* Media Queries para móviles */  
+        @media (max-width: 768px) {  
+            /* Mostrar la barra de navegación móvil y fijarla en la parte superior */  
+            .navbar-mobile {  
+                display: flex;  
+                position: fixed; /* Fija la barra de navegación */  
+                top: 0;  
+                left: 0;  
+                width: 100%;  
+                z-index: 1000; /* Asegura que esté por encima de otros elementos */  
+                background-color: #222; /* Asegura que tenga un fondo sólido */  
+            }  
+
+            /* Ocultar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: none;  
+            }  
+
+            /* Ajustar el padding-top del body para que el contenido no quede oculto */  
+            body {  
+                padding-top: 50px; /* Ajustar según la altura de la barra de navegación */  
+                box-sizing: border-box;  
+            }  
+
+            /* Ajustes para la disposición de las imágenes y el texto en móvil */  
+            .description-container {  
+                flex-direction: column; /* Apila las imágenes y el texto */  
+            }  
+
+            .description-images {  
+                width: 100%; /* Las imágenes ocupan todo el ancho */  
+                margin-right: 0; /* Elimina el margen derecho */  
+            }  
+
+            .description-text {  
+                width: 100%; /* El texto ocupa todo el ancho */  
+            }  
+
+            /* Ajustes para la sección "My Contribution" en móvil */  
+            .row {  
+                flex-direction: column; /* Apila las columnas en pantallas pequeñas */  
+                align-items: stretch; /* Ocupa todo el ancho */  
+            }  
+
+            /* Estilos específicos para la imagen y el texto en móvil */  
+            .mobile-image {  
+                max-width: 100%; /* Asegura que la imagen no exceda el ancho de la pantalla */  
+                height: auto;  
+                margin-bottom: 10px; /* Espacio debajo de la imagen */  
+            }  
+
+            .mobile-text {  
+                font-size: 0.9em; /* Reduce el tamaño de la fuente para que se vea mejor en móvil */  
+                line-height: 1.4; /* Mejora la legibilidad del texto */  
+            }  
+
+            /* Ajuste de la imagen principal */  
+            .image-large {  
+                width: 100%;  
+            }  
+
+            /* Mejora la distribución del texto */  
+            p, ul {  
+                margin: 10px 0;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            h3 {  
+                font-size: 1.5em;  
+                margin-bottom: 50px;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            /* Ajuste para el video en versión móvil */  
+            video {  
+                width: 100% !important;  
+            }  
+
+            /* Ajuste para el contenido debajo de la barra de navegación fija */  
+            body {  
+                padding-top: 50px; /* Ajustar según la altura de la barra de navegación */  
+                box-sizing: border-box;  
+            }  
+
+            /* Alinear el texto a la izquierda en la versión móvil */  
+            p, ul li {  
+                text-align: left;  
+            }  
+        }  
+
+        /* Estilos para la versión de escritorio */  
+        @media (min-width: 769px) {  
+            /* Alineación del texto a la izquierda en la versión de escritorio */  
+            p, ul li {  
+                text-align: left;  
+            }  
+
+            /* Estilos para la sección "My Contribution" en escritorio */  
+            .row {  
+                display: flex;  
+                align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+            }  
+
+            .col-6 {  
+                width: 50%; /* Cada columna ocupa la mitad del ancho */  
+                padding: 10px;  
+                box-sizing: border-box;  
+            }  
+
+            .col-6 img {  
+                max-width: 100%; /* La imagen no excede el ancho de su contenedor */  
+                height: auto;  
+                display: block; /* Elimina el espacio extra debajo de la imagen */  
+                margin: 0 auto; /* Centra la imagen horizontalmente */  
+            }  
+        }  
+    </style>  
+</head>  
+<body class="is-preload">  
+    <!-- Nav para escritorio -->  
+    <nav id="nav" class="navbar-desktop">  
+        <ul>  
+            <li style="margin-right: auto;"><a href="index.html">Josadac Orozco Rivera</a></li>  
+            <div style="display: flex; gap: 15px;">  
+                <li><a href="index.html#work">Projects</a></li>  
+                <li><a href="index.html#contact">Contact Me</a></li>  
+                <li><a href="cv.html">CV</a>  
+            </div>  
+        </ul>  
+    </nav>  
+
+    <!-- Nav para móviles -->  
+    <nav class="navbar-mobile">  
+        <div class="dropdown">  
+            <button class="dropdown-button">Menú</button>  
+            <div class="dropdown-content">  
+                <a href="index.html">Home</a>  
+                <a href="index.html#work">Projects</a>  
+                <a href="index.html#contact">Contact Me</a>  
+                <a href="cv.html">CV</a>  
+            </div>  
+        </div>  
+    </nav>  
+
+    <!-- Project -->  
+    <article id="project1" class="wrapper style2">  
+        <div class="container">  
+            <header class="center">  
+                <h2>Student Unmanned Aerial Systems Competition (2025)</h2>  
+                <p style="text-align: center;">CETYS University, Tijuana, Mx.</p>  
+            </header>  
+
+            <!-- Subtitle 1 -->  
+            <section class="description-container">  
+                <div class="description-images">  
+                    <img src="images/suas1.jpg" alt="Aircraft Image 1" />  
+                </div>  
+                <div class="description-text">  
+                    <h3><strong>Description</strong></h3>  
+                    <p>The SUAS (Student Unmanned Aerial Systems) competition is an event aimed at promoting interest in Unmanned Aerial Systems (UAS) by engaging students in challenging missions. Teams must showcase their UAS’s ability to execute tasks such as autonomous flight, navigation, object detection, and delivery, all while adhering to strict safety and efficiency standards. </p>   
+                    <p>The student group founded by the author (CADIS), is currently on track to compete in SUAS 2025.</p>  
+                </div>  
+            </section>  
+
+            <hr /> <!-- Línea divisoria entre Description y My Contribution -->  
+
+            <!-- Subtitle 2 -->  
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>My Contribution</strong></h3>  
+
+                    <div class="row">  
+                        <!-- Aplica la clase mobile-image a la imagen -->  
+                        <div>  
+                            <img src="images/suas2.png" alt="Team Leader Image" class="mobile-image" />  
+                        </div>  
+                        <!-- Aplica la clase mobile-text al párrafo -->  
+                        <div class="mobile-text">  
+                            <p>As the founder and president of the student club, some of my responsibilities were:</p>  
+                            <ul>  
+                                <li>Conceptualized UAV, choosing adequate tail and wing configuration, according to design needs. First draft of aircraft sizing.</li>  
+                                <li>Designed wings for additive manufacturing utilizing CAD.</li>  
+                                <li>Printed and assembled the UAV mockup for project presentation.</li>  
+                                <li>Serving as project advisor to new generation of CADIS team members, preparing to compete in SUAS 2025.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <!-- Space for Large Image -->  
+            <section class="large-image-section">  
+                <img src="images/uavassembly.jpg" alt="Large Image" class="large-image" />  
+            </section>  
+
+    <!-- Scripts -->  
+    <script src="assets/js/jquery.min.js"></script>  
+    <script src="assets/js/jquery.scrolly.min.js"></script>  
+    <script src="assets/js/browser.min.js"></script>  
+    <script src="assets/js/breakpoints.min.js"></script>  
+    <script src="assets/js/util.js"></script>  
+    <script src="assets/js/main.js"></script>  
+</body>  
 </html>
