@@ -1,140 +1,301 @@
 <!DOCTYPE HTML>  
 <html>  
-	<head>  
-		<title>Project 5 - Details</title>  
-		<meta charset="utf-8" />  
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
-		<link rel="stylesheet" href="assets/css/main.css" />  
-		<style>  
-			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
-			p, ul li {  
-				text-align: left;  
-				color: black; /* Set text color to black */  
-			}  
+<head>  
+    <title>Project 5 - Details</title>  
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+    <link rel="stylesheet" href="assets/css/main.css" />  
+    <style>  
+        /* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
+        p, ul li {  
+            text-align: left;  
+            color: black; /* Set text color to black */  
+        }  
 
-			/* Ensure all text on the page is black */  
-			body {  
-				color: black;  
-			}  
+        /* Ensure all text on the page is black */  
+        body {  
+            color: black;  
+        }  
 
-			.center {  
-				text-align: center;  
-			}  
+        .center {  
+            text-align: center;  
+        }  
 
-			/* Estilo para acomodar las dos imágenes una encima de la otra */  
-			.description-images {  
-				display: flex;  
-				flex-direction: column; /* Alinea las imágenes en una sola columna */  
-				gap: 20px; /* Espacio entre las imágenes */  
-				margin-right: 20px; /* Espacio entre imágenes y texto */  
-				width: 40%; /* Porcentaje del ancho que ocuparán las imágenes */  
-			}  
+        /* Estilo para acomodar las dos imágenes una encima de la otra */  
+        .description-images {  
+            display: flex;  
+            flex-direction: column; /* Alinea las imágenes en una sola columna */  
+            gap: 20px; /* Espacio entre las imágenes */  
+            margin-right: 20px; /* Espacio entre imágenes y texto */  
+            width: 40%; /* Porcentaje del ancho que ocuparán las imágenes */  
+        }  
 
-			.description-images img {  
-				width: 100%;  
-				height: auto;  
-				border-radius: 5px;  
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-			}  
+        .description-images img {  
+            width: 100%;  
+            height: auto;  
+            border-radius: 5px;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        }  
 
-			/* Contenedor principal de las imágenes y el texto */  
-			.description-container {  
-				display: flex; /* Para alinear las imágenes y el texto uno al lado del otro */  
-				align-items: flex-start; /* Asegurar la alineación superior */  
-			}  
+        /* Contenedor principal de las imágenes y el texto */  
+        .description-container {  
+            display: flex; /* Para alinear las imágenes y el texto uno al lado del otro */  
+            align-items: flex-start; /* Asegurar la alineación superior */  
+        }  
 
-			/* Texto ajustado a la derecha */  
-			.description-text {  
-				flex: 1; /* Permitir que el texto ocupe el espacio disponible */  
-			}  
+        /* Texto ajustado a la derecha */  
+        .description-text {  
+            flex: 1; /* Permitir que el texto ocupe el espacio disponible */  
+        }  
 
-			/* Subtítulos principales (Description, My Contribution, Results) */  
-			h3 {  
-				font-size: 1.8em;  
-				font-weight: bold;  
-				color: black;  
-			}  
+        /* Subtítulos principales (Description, My Contribution, Results) */  
+        h3 {  
+            font-size: 1.8em;  
+            font-weight: bold;  
+            color: black;  
+        }  
 
-			/* Espaciado extra entre imágenes y el siguiente contenido */  
-			.row img {  
-				margin-bottom: 30px;  
-			}  
+        /* Espaciado extra entre imágenes y el siguiente contenido */  
+        .row img {  
+            margin-bottom: 30px;  
+        }  
 
-			.row {  
-				display: flex;  
-				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
-			}  
-		</style>  
-	</head>  
-	<body class="is-preload">  
-		<!-- Nav -->  
-		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
-			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
-				<li style="margin-right: auto;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Josadac Orozco Rivera</a></li>  
-				<div style="display: flex; gap: 15px;"> <!-- Contenedor para los enlaces alineados a la derecha -->  
-					<li><a href="index.html#work" style="color: white; text-decoration: none; font-size: 1.2rem;">Projects</a></li>  
-					<li><a href="index.html#contact" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact Me</a></li>  
-					<li><a href="cv.html" style="color: white; text-decoration: none; font-size: 1.2rem;">CV</a></li>  
-				</div>  
-			</ul>  
-		</nav>    
+        .row {  
+            display: flex;  
+            align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
+        }  
 
-		<!-- Project -->  
-		<article id="project1" class="wrapper style2">  
-			<div class="container">  
-				<header class="center">  
-					<h2>"Cetys Aerodesign Society" Engineering Student Club Founder (2023-2025)</h2>  
-					<p style="text-align: center;">CETYS University, Tijuana, Mx.</p>  
-				</header>  
+        /* Estilos para el menú desplegable */  
+        .dropdown {  
+            position: relative;  
+            display: inline-block;  
+        }  
 
-				<!-- Subtitle 1 -->  
-				<section class="description-container">  
-					<div class="description-images">  
-						<img src="images/cadis1.JPEG" alt="Aircraft Image 1" />  
-						<img src="images/cadis2.JPEG" alt="Aircraft Image 2" />  
-					</div>  
-					<div class="description-text">  
-						<h3><strong>Description</strong></h3>  
-						<p>In May 2023, I founded the "Cetys Aerodesign Society" (CADIS) engineering student club with the following objectives in mind. </p>  
-						<ul>   
-							<li><strong>Promote interest in aerospace sciences</strong> at campus, by inviting students of all faculties to join the club and participate in our activities. </li>   
-							<li>Participate as a team in <strong>aeronautic engineering competitions</strong>, fostering personal and academic growth for students. </li>  
-							<li>Be a space where students of all ages and backgrounds can interact, grow, and <strong>learn to work as a team</strong>, while applying theoretical concepts to real-world applications, acquiring a deeper understanding of engineering fundamentals and <strong>soft skills.</strong> </li>   
-						</ul>  
-					</div>  
-				</section>  
+        .dropdown-button {  
+            background-color: #222;  
+            color: white;  
+            padding: 10px;  
+            font-size: 1.2rem;  
+            border: none;  
+            cursor: pointer;  
+        }  
 
-				<hr /> <!-- Línea divisoria entre Description y My Contribution -->  
+        .dropdown-content {  
+            display: none;  
+            position: absolute;  
+            background-color: #222;  
+            min-width: 160px;  
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+            z-index: 1;  
+        }  
 
-				<!-- Subtitle 2 -->  
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>My Contribution</strong></h3>  
+        .dropdown-content a {  
+            color: white;  
+            padding: 12px 16px;  
+            text-decoration: none;  
+            display: block;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/cadisfounder.jpg" alt="Team Leader Image" width="590" height="370" />  
-							</div>  
-							<div class="col-6">  
-								<p>As the founder and president of the student club, some of my responsibilities were:</p>  
-								<ul>   
-									<li>Organize the student board, appointing secretary, creative director, treasurer and team leads. </li>   
-									<li>Onboard team members on weekly meetings, discussing and assigning activities. </li>  
-									<li>Attend monthly meetings with the Student Affair Department for participation in campus-wide fund-raising activities. </li>  
-									<li>Teach use of SolidWorks and printing software to new club members for participation in the group's engineering competitions.</li>  
-									<li>Organizing club participation in <strong>volunteering work</strong>, such as Christmas events for foster children.</li>  
-								</ul>  
-							</div>  
-						</div>  
-					</div>  
-				</section>  
+        .dropdown-content a:hover {  
+            background-color: #555;  
+        }  
 
-		<!-- Scripts -->  
-		<script src="assets/js/jquery.min.js"></script>  
-		<script src="assets/js/jquery.scrolly.min.js"></script>  
-		<script src="assets/js/browser.min.js"></script>  
-		<script src="assets/js/breakpoints.min.js"></script>  
-		<script src="assets/js/util.js"></script>  
-		<script src="assets/js/main.js"></script>  
-	</body>  
+        .dropdown:hover .dropdown-content {  
+            display: block;  
+        }  
+
+        /* Estilos para la barra de navegación de escritorio */  
+        .navbar-desktop {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            height: 60px;  
+            background-color: #222;  
+            padding: 0 150px;  
+        }  
+
+        .navbar-desktop ul {  
+            display: flex;  
+            gap: 15px;  
+            width: 100%;  
+            align-items: center;  
+            margin: 0;  
+            list-style: none;  
+            padding: 0;  
+        }  
+
+        .navbar-desktop li {  
+            margin-right: auto;  
+        }  
+
+        .navbar-desktop a {  
+            color: white;  
+            text-decoration: none;  
+            font-size: 1.2rem;  
+        }  
+
+        /* Estilos para la barra de navegación móvil */  
+        .navbar-mobile {  
+            display: none;  
+            background-color: #222;  
+            padding: 10px;  
+            height: auto;  
+            justify-content: center;  
+            align-items: center;  
+        }  
+
+        /* Media Queries para móviles */  
+        @media (max-width: 768px) {  
+            /* Mostrar la barra de navegación móvil y fijarla en la parte superior */  
+            .navbar-mobile {  
+                display: flex;  
+                position: fixed; /* Fija la barra de navegación */  
+                top: 0;  
+                left: 0;  
+                width: 100%;  
+                z-index: 1000; /* Asegura que esté por encima de otros elementos */  
+                background-color: #222; /* Asegura que tenga un fondo sólido */  
+            }  
+
+            /* Ocultar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: none;  
+            }  
+
+            /* Ajustar el padding-top del body para que el contenido no quede oculto */  
+            body {  
+                padding-top: 50px; /* Ajustar según la altura de la barra de navegación */  
+                box-sizing: border-box;  
+            }  
+
+            /* Ajustes para la disposición de las imágenes y el texto en móvil */  
+            .description-container {  
+                flex-direction: column; /* Apila las imágenes y el texto */  
+            }  
+
+            .description-images {  
+                width: 100%; /* Las imágenes ocupan todo el ancho */  
+                margin-right: 0; /* Elimina el margen derecho */  
+            }  
+
+            .description-text {  
+                width: 100%; /* El texto ocupa todo el ancho */  
+            }  
+
+    		/* Ajustes para la sección "My Contribution" en móvil */  
+    		.row {  
+        		flex-direction: column; /* Apila las columnas en pantallas pequeñas */  
+    		}  
+
+            /* Columnas en la version movil */  
+            .row > .col-4, .row > .col-5, .row > .col-6, .row > .col-8, .row > .col-12 {  
+                width: 100%;  
+                padding: 10px; /* Añadido padding para dar espacio a los lados */  
+                box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */  
+            }  
+
+            /* Imagen */  
+            .row .col-6 img {  
+                width: 100%; /* La imagen ocupa todo el ancho */  
+                height: auto; /* Mantiene la proporción de la imagen */  
+                display: block; /* Evita espacios extra debajo de la imagen */  
+                margin: 0 auto; /* Centra la imagen horizontalmente */  
+            }  
+
+            /* Ajusta la disposición del texto debajo de la imagen en la versión móvil */  
+            .row .col-6:last-child {  
+                order: 1; /* Mueve el texto debajo de la imagen */  
+            }  
+
+            .row .col-6:first-child {  
+                order: 0; /* Mantiene la imagen en la parte superior */  
+            }  
+        }  
+    </style>  
+</head>  
+<body class="is-preload">  
+    <!-- Nav para escritorio -->  
+    <nav id="nav" class="navbar-desktop">  
+        <ul>  
+            <li style="margin-right: auto;"><a href="index.html">Josadac Orozco Rivera</a></li>  
+            <div style="display: flex; gap: 15px;">  
+                <li><a href="index.html#work">Projects</a></li>  
+                <li><a href="index.html#contact">Contact Me</a></li>  
+                <li><a href="cv.html">CV</a>  
+            </div>  
+        </ul>  
+    </nav>  
+
+    <!-- Nav para móviles -->  
+    <nav class="navbar-mobile">  
+        <div class="dropdown">  
+            <button class="dropdown-button">Menú</button>  
+            <div class="dropdown-content">  
+                <a href="index.html">Home</a>  
+                <a href="index.html#work">Projects</a>  
+                <a href="index.html#contact">Contact Me</a>  
+                <a href="cv.html">CV</a>  
+            </div>  
+        </div>  
+    </nav>  
+
+    <!-- Project -->  
+    <article id="project1" class="wrapper style2">  
+        <div class="container">  
+            <header class="center">  
+                <h2>"Cetys Aerodesign Society" Engineering Student Club Founder (2023-2025)</h2>  
+                <p style="text-align: center;">CETYS University, Tijuana, Mx.</p>  
+            </header>  
+
+            <!-- Subtitle 1 -->  
+            <section class="description-container">  
+                <div class="description-images">  
+                    <img src="images/cadis1.JPEG" alt="Aircraft Image 1" />  
+                    <img src="images/cadis2.JPEG" alt="Aircraft Image 2" />  
+                </div>  
+                <div class="description-text">  
+                    <h3><strong>Description</strong></h3>  
+                    <p>In May 2023, I founded the "Cetys Aerodesign Society" (CADIS) engineering student club with the following objectives in mind. </p>  
+                    <ul>   
+                        <li><strong>Promote interest in aerospace sciences</strong> at campus, by inviting students of all faculties to join the club and participate in our activities. </li>   
+                        <li>Participate as a team in <strong>aeronautic engineering competitions</strong>, fostering personal and academic growth for students. </li>  
+                        <li>Be a space where students of all ages and backgrounds can interact, grow, and <strong>learn to work as a team</strong>, while applying theoretical concepts to real-world applications, acquiring a deeper understanding of engineering fundamentals and <strong>soft skills.</strong> </li>   
+                    </ul>   
+                </div>  
+            </section>  
+
+            <hr /> <!-- Línea divisoria entre Description y My Contribution -->  
+
+            <!-- Subtitle 2 -->  
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>My Contribution</strong></h3>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/cadisfounder.jpg" alt="Team Leader Image" width="590" height="370" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p>As the founder and president of the student club, some of my responsibilities were:</p>  
+                            <ul>   
+                                <li>Organize the student board, appointing secretary, creative director, treasurer and team leads. </li>   
+                                <li>Onboard team members on weekly meetings, discussing and assigning activities. </li>  
+                                <li>Attend monthly meetings with the Student Affair Department for participation in campus-wide fund-raising activities. </li>  
+                                <li>Teach use of SolidWorks and printing software to new club members for participation in the group's engineering competitions.</li>  
+                                <li>Organizing club participation in <strong>volunteering work</strong>, such as Christmas events for foster children.</li>  
+                            </ul>   
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+    </article>  
+
+    <!-- Scripts -->  
+    <script src="assets/js/jquery.min.js"></script>  
+    <script src="assets/js/jquery.scrolly.min.js"></script>  
+    <script src="assets/js/browser.min.js"></script>  
+    <script src="assets/js/breakpoints.min.js"></script>  
+    <script src="assets/js/util.js"></script>  
+    <script src="assets/js/main.js"></script>  
+</body>  
 </html>
