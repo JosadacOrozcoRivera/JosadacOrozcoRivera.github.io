@@ -1,264 +1,407 @@
 <!DOCTYPE HTML>  
 <html>  
-	<head>  
-		<title>Project 1 - Details</title>  
-		<meta charset="utf-8" />  
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
-		<link rel="stylesheet" href="assets/css/main.css" />  
-		<style>  
-			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
-			p, h4, ul li {  
-				text-align: left;  
-				color: black; /* Set text color to black */  
-			}  
+<head>  
+    <title>Project 1 - Details</title>  
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+    <link rel="stylesheet" href="assets/css/main.css" />  
+    <style>  
+        /* Estilos generales */  
+        p, h4, ul li {  
+            text-align: left;  
+            color: black;  
+        }  
 
-			/* Ensure all text on the page is black */  
-			body {  
-				color: black;  
-			}  
+        body {  
+            color: black;  
+        }  
 
-			.center {  
-				text-align: center;  
-			}  
+        .center {  
+            text-align: center;  
+        }  
 
-			.image-large {  
-				display: block;  
-				margin: 20px auto;  
-				width: 80%; /* Ajusta el tamaño según sea necesario */  
-			}  
+        .image-large {  
+            display: block;  
+            margin: 20px auto;  
+            width: 80%;  
+        }  
 
-			/* Subtítulos principales (Description, My Contribution, Results) */  
-			h3 {  
-				font-size: 1.8em;  
-				font-weight: bold;  
-				color: black;  
-			}  
+        h3 {  
+            font-size: 1.8em;  
+            font-weight: bold;  
+            color: black;  
+        }  
 
-			/* Subtítulos más grandes en Subtítulos secundarios */  
-			.col-12 h4 {  
-				font-size: 1.5em;  
-				margin-bottom: 20px; /* Espacio adicional debajo de los subtítulos */  
-			}  
+        .col-12 h4 {  
+            font-size: 1.5em;  
+            margin-bottom: 20px;  
+        }  
 
-			/* Espaciado extra entre imágenes y el siguiente subtítulo */  
-			.row img {  
-				margin-bottom: 30px;  
-			}  
+        .row img {  
+            margin-bottom: 30px;  
+        }  
 
-			/* Espaciado adicional entre subtítulos siguientes (h4) y contenido previo */  
-			h4 {  
-				margin-top: 20px;  
-			}  
+        h4 {  
+            margin-top: 20px;  
+        }  
 
-			/* Alineación horizontal entre texto e imágenes en las secciones */  
-			.row {  
-				display: flex;  
-				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
-				flex-wrap: wrap; /* Permitir que las columnas se envuelvan en pantallas pequeñas */  
-			}  
+        .row {  
+            display: flex;  
+            align-items: flex-start;  
+            flex-wrap: wrap;  
+        }  
 
-			.row img {  
-				position: relative;  
-				top: +10px; /* Subimos ligeramente la imagen para alinearla con el texto */  
-				margin: 0; /* Eliminamos márgenes externos */   
-			}  
+        .row img {  
+            position: relative;  
+            top: +10px;  
+            margin: 0;  
+        }  
 
-			/* Espaciado dentro de la sección */  
-			.row > .col-4, .row > .col-8, .row > .col-12 {  
-				padding: 10px;  
-				box-sizing: border-box; /* Para incluir el padding en el ancho total */  
-			}  
+        .row > .col-4, .row > .col-8, .row > .col-12 {  
+            padding: 10px;  
+            box-sizing: border-box;  
+        }  
 
-			/* Media Queries para Responsividad */  
-			@media (max-width: 768px) {  
-				nav {  
-					padding: 0 20px; /* Reduce el padding en móviles */  
-					flex-direction: column; /* Cambia la dirección de la navegación en móviles */  
-				}  
-				.image-large {  
-					width: 100%; /* Asegúrate de que las imágenes ocupen el 100% del ancho */  
-				}  
-				.row {  
-					flex-direction: column; /* Cambia la dirección de las filas en móviles */  
-				}  
-				.col-4, .col-8, .col-12 {  
-					width: 100%; /* Asegúrate de que las columnas ocupen el 100% en móviles */  
-					padding: 0; /* Elimina el padding para móviles */  
-				}  
-				h3 {  
-					font-size: 1.5em; /* Ajusta el tamaño de los subtítulos */  
-				}  
-				h4 {  
-					font-size: 1.2em; /* Ajusta el tamaño de los sub-subtítulos */  
-				}  
-			}  
-		</style>  
-	</head>  
-	<body class="is-preload">  
-		<!-- Nav -->  
-		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
-			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
-				<li style="margin-right: auto;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Josadac Orozco Rivera</a></li>  
-				<div style="display: flex; gap: 15px;"> <!-- Contenedor para los enlaces alineados a la derecha -->  
-					<li><a href="index.html#work" style="color: white; text-decoration: none; font-size: 1.2rem;">Projects</a></li>  
-					<li><a href="index.html#contact" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact Me</a></li>  
-					<li><a href="cv.html" style="color: white; text-decoration: none; font-size: 1.2rem;">CV</a></li>  
-				</div>  
-			</ul>  
-		</nav>    
+        .image.fit {  
+            max-width: 100%;  
+            display: block;  
+            margin: 0 auto;  
+        }  
 
-		<!-- Project -->  
-		<article id="project1" class="wrapper style2">  
-			<div class="container">  
-				<header class="center">  
-					<h2>CSU 3D-Printed Fixed-Wing Aircraft Competition (2023, 2024, 2025)</h2>  
-					<p style="text-align: center;">Los Angeles, CA</p>  
-				</header>  
+        /* Estilos para el menú desplegable */  
+        .dropdown {  
+            position: relative;  
+            display: inline-block;  
+        }  
 
-				<img src="images/calstate.jpg" alt="Aircraft Image" class="image-large" />  
+        .dropdown-button {  
+            background-color: #222;  
+            color: white;  
+            padding: 10px;  
+            font-size: 1.2rem;  
+            border: none;  
+            cursor: pointer;  
+        }  
 
-				<!-- Subtitle 1 -->  
-				<section class="row center">  
-					<div class="col-12">  
-						<h3><strong>Description</strong></h3>  
-						<p>This is an aeronautical design competition that takes place in the Cal State LA campus, where undergraduate students are challenged with designing, building and flying a 3D printed aircraft. The planes need to be lightweight, and the designs need to maximize performance given manufacturing and material constraints.</p>  
-					</div>  
-				</section>  
+        .dropdown-content {  
+            display: none;  
+            position: absolute;  
+            background-color: #222;  
+            min-width: 160px;  
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+            z-index: 1;  
+        }  
 
-				<hr /> <!-- Línea divisora entre Description y My Contribution -->  
+        .dropdown-content a {  
+            color: white;  
+            padding: 12px 16px;  
+            text-decoration: none;  
+            display: block;  
+        }  
 
-				<!-- Subtitle 2 -->  
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>My Contribution</strong></h3>  
-						  
-						<!-- Sub-subtitle 1 -->  
-						<h4>Team Leader</h4>  
-						<div class="row">  
-							<div class="col-4">  
-								<img src="images/leader.JPEG" alt="Team Leader Image" class="image fit" width="300" height="270" />  
-							</div>  
-							<div class="col-8">  
-								<p>Led a team of six students from mechanical and mechatronics engineering , in organizing the research, design, manufacturing, and testing stages to make the best use of the team’s skills and time. Also focused on managing resources effectively and finding ways to promote the project to attract additional sponsors and support.</p>  
-								<ul>  
-									<li>Coordinated project management for aicraft development.</li>  
-									<li>Secured sponsorships and funding for the project.</li>  
-									<li>Onborded team members on weekly meetings.</li>  
-								</ul>  
-							</div>  
-						</div>  
+        .dropdown-content a:hover {  
+            background-color: #555;  
+        }  
 
-						<!-- Sub-subtitle 2 -->  
-						<h4>Aicraft Dimensioning & Aerodesign</h4>  
-						<div class="row">  
-							<div class="col-4">  
-								<img src="images/draft.png" alt="Aerodesign Image" class="image fit"  />  
-							</div>  
-							<div class="col-8">  
-								<p>Created the first draft of how aircraft would be sized, applying aeronautical fundamentals to ensure wing geometry generated the most lift. Iterated using XFLR5 to obtain the most efficient airfoil.</p>  
-								<ul>  
-									<li>Analyzed lift-to-drag ratio for optimal performance.</li>  
-									<li>Tested multiple airfoil configurations in XFLR5.</li>  
-									<li>Validated designs through simulation and prototyping.</li>  
-								</ul>  
-							</div>  
-						</div>  
+        .dropdown:hover .dropdown-content {  
+            display: block;  
+        }  
 
-						<!-- Sub-subtitle 3 -->  
-						<h4>CAD Design for Additive Manufacturing</h4>  
-						<div class="row">  
-							<div class="col-4">  
-								<img src="images/wireframe.png" alt="CAD Design Image" class="image fit" />  
-							</div>  
-							<div class="col-8">  
-								<p>Designed the aircraft in Solidworks, including wings, tail section, and fuselage. Due to the nature of 3D printing, internal wing geometry was manually designed and tested to reduce weight while ensuring structural integrity.</p>  
-								<ul>  
-									<li>Optimized designs for weight reduction.</li>  
-									<li>Ensured manufacturability with 3D printing constraints.</li>  
-									<li>Performed structural analysis on critical components.</li>  
-								</ul>  
-							</div>  
-						</div>  
+        /* Estilos para la barra de navegación de escritorio */  
+        .navbar-desktop {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            height: 60px;  
+            background-color: #222;  
+            padding: 0 150px;  
+        }  
 
-						<!-- Sub-subtitle 4 -->  
-						<h4>Slicer Fine-tuning</h4>  
-						<div class="row">  
-							<div class="col-4">  
-								<img src="images/slicer.png" alt="Slicer Fine-tuning Image" class="image fit" />  
-							</div>  
-							<div class="col-8">  
-								<p>Fine-tuned slicer parameters to obtain the best quality prints, e.g., flow rate, layer height, seam position, travel and layer speed, etc.</p>  
-								<ul>  
-									<li>Adjusted print settings for optimal layer adhesion.</li>  
-									<li>Reduced print time without compromising quality.</li>  
-									<li>Resolved issues like warping and stringing.</li>  
-								</ul>  
-							</div>  
-						</div>  
-					</div>  
-					<div class="row">  
-						<div class="col-4">  
-							<!-- Reemplazamos la imagen con un elemento <video> -->  
-							<video width="550" height="370" controls>  
-								<source src="images/impresionvideo.MP4" type="video/mp4">  
-								Your browser does not support the video tag.  
-							</video>  
-						</div>		  
-				</section>  
-				  
+        .navbar-desktop ul {  
+            display: flex;  
+            gap: 15px;  
+            width: 100%;  
+            align-items: center;  
+            margin: 0;  
+            list-style: none;  
+            padding: 0;  
+        }  
 
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>Results</strong></h3>  
-						<p>The project successfully produced a lightweight, efficient aircraft that performed well during competition, achievin 4th place among 15 total competing teams.   
-							The team also gained valuable experience in aeronautical design and additive manufacturing techniques.  
-							</p>  
+        .navbar-desktop li {  
+            margin-right: auto;  
+        }  
 
-						<!-- Sub-subtitle 1 -->  
-						<h4>Our strenghts</h4>  
-						<div class="row">  
-							<div class="col-4">  
-								<img src="images/results 2.jpg" alt="Design Performance Image" class="image fit" />  
-							</div>  
-							<div class="col-8">  
-								<p>Areas our team performed specially well.</p>  
-								<ul>  
-									<li>Internal wing geometry provided the team with a significant advantage over competitors, thanks to the extensive effort and investment made in optimizing a design that achieved the ideal balance between structural integrity and weight.</li>  
-									<li>Placement and routing design of carbon tubes proved to be an effective method for minimizing printed supports, thereby reducing the overall weight.   
-									<li>Due to adeaquate balancing, our aircraft was able to maintain flight.</li>  
-									<li>Modular design allowed for fast field repairs and part replacement.</li>  
-								</ul>  
-							</div>  
-						</div>  
+        .navbar-desktop a {  
+            color: white;  
+            text-decoration: none;  
+            font-size: 1.2rem;  
+        }  
 
-						<!-- Sub-subtitle 2 -->  
-						<h4>Lessons learned & 2025</h4>  
-						<div class="row">  
-							<div class="col-4">  
-								<img src="images/DSC-22.jpg" alt="Flight Achievements Image" class="image fit" />  
-							</div>  
-							<div class="col-8">  
-								<p>Highlights of the flight performance, showcasing the aircraft's capabilities and results achieved during the competition.</p>  
-								<ul>  
-									<li>Torque generated by motor to fuselage structure should not be dismissed due to it altering flight trayectory.</li>  
-									<li>Increase margin of error to 10% on project timeline to ensure printing complications don’t delay necessary test flights.  
-										.</li>  
-									<li>Invest in learning to print LW-PLA, weight difference is abismal (1.24 g/cm3 vs. 0.54 g/cm^3)  
-										.</li>  
-								</ul>  
-							</div>  
-						</div>  
-					</div>  
-				</section>  
-			</div>  
-		</article>  
+        /* Estilos para la barra de navegación móvil */  
+        .navbar-mobile {  
+            display: none;  
+            background-color: #222;  
+            padding: 10px;  
+            height: auto;  
+            justify-content: center;  
+            align-items: center;  
+        }  
 
-		<!-- Scripts -->  
-		<script src="assets/js/jquery.min.js"></script>  
-		<script src="assets/js/jquery.scrolly.min.js"></script>  
-		<script src="assets/js/browser.min.js"></script>  
-		<script src="assets/js/breakpoints.min.js"></script>  
-		<script src="assets/js/util.js"></script>  
-		<script src="assets/js/main.js"></script>  
-	</body>  
+        /* Media Queries para móviles */  
+        @media (max-width: 768px) {  
+            /* Mostrar la barra de navegación móvil */  
+            .navbar-mobile {  
+                display: flex;  
+                position: fixed; /* Fixed position */  
+                top: 0; /* Stick to the top */  
+                left: 0;  
+                width: 100%;  
+                z-index: 1000; /* Ensure it stays on top */  
+            }  
+
+            /* Ocultar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: none;  
+            }  
+
+            /* Cambiar la dirección de las filas a vertical */  
+            .row {  
+                flex-direction: column;  
+            }  
+
+            /* Imágenes ocupan el 100% del ancho */  
+            .row img {  
+                width: 100%;  
+                height: auto;  
+                top: 0;  
+                margin-bottom: 30px;  
+                margin-top: 30px;  
+            }  
+
+            /* Texto se coloca debajo de las imágenes */  
+            .row > .col-4, .row > .col-8, .row > .col-12 {  
+                width: 100%;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            /* Ajuste de la imagen principal */  
+            .image-large {  
+                width: 100%;  
+            }  
+
+            /* Mejora la distribución del texto */  
+            p, ul {  
+                margin: 10px 0;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            h3 {  
+                font-size: 1.5em;  
+                margin-bottom: 50px;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            /* Ajuste para el video en versión móvil */  
+            video {  
+                width: 100% !important;  
+            }  
+
+            /* Ajuste para el contenido debajo de la barra de navegación fija */  
+            body {  
+                padding-top: 50px; /* Ajustar según la altura de la barra de navegación */  
+                box-sizing: border-box;  
+            }  
+        }  
+
+        /* Estilos para la versión de escritorio */  
+        @media (min-width: 769px) {  
+            /* Mostrar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: flex;  
+            }  
+
+            /* Ocultar la barra de navegación móvil */  
+            .navbar-mobile {  
+                display: none;  
+            }  
+        }  
+    </style>  
+</head>  
+<body class="is-preload">  
+    <!-- Nav para escritorio -->  
+    <nav id="nav" class="navbar-desktop">  
+        <ul>  
+            <li style="margin-right: auto;"><a href="index.html">Josadac Orozco Rivera</a></li>  
+            <div style="display: flex; gap: 15px;">  
+                <li><a href="index.html#work">Projects</a></li>  
+                <li><a href="index.html#contact">Contact Me</a></li>  
+                <li><a href="cv.html">CV</a>  
+            </div>  
+        </ul>  
+    </nav>  
+
+    <!-- Nav para móviles -->  
+    <nav class="navbar-mobile">  
+        <div class="dropdown">  
+            <button class="dropdown-button">Menú</button>  
+            <div class="dropdown-content">  
+                <a href="index.html">Home</a>  
+                <a href="index.html#work">Projects</a>  
+                <a href="index.html#contact">Contact Me</a>  
+                <a href="cv.html">CV</a>  
+            </div>  
+        </div>  
+    </nav>  
+
+    <!-- Project -->  
+    <article id="project1" class="wrapper style2">  
+        <div class="container">  
+            <header class="center">  
+                <h2>CSU 3D-Printed Fixed-Wing Aircraft Competition (2023, 2024, 2025)</h2>  
+                <p style="text-align: center;">Los Angeles, CA</p>  
+            </header>  
+
+            <img src="images/calstate.jpg" alt="Aircraft Image" class="image-large" />  
+
+            <!-- Subtitle 1 -->  
+            <section class="row center">  
+                <div class="col-12">  
+                    <h3><strong>Description</strong></h3>  
+                    <p>This is an aeronautical design competition that takes place in the Cal State LA campus, where undergraduate students are challenged with designing, building and flying a 3D printed aircraft. The planes need to be lightweight, and the designs need to maximize performance given manufacturing and material constraints.</p>  
+                </div>  
+            </section>  
+
+            <hr />  
+
+            <!-- Subtitle 2 -->  
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>My Contribution</strong></h3>  
+
+                    <!-- Sub-subtitle 1 -->  
+                    <h4>Team Leader</h4>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="images/leader.JPEG" alt="Team Leader Image" class="image fit" />  
+                        </div>  
+                        <div class="col-8">  
+                            <p>Led a team of six students from mechanical and mechatronics engineering, in organizing the research, design, manufacturing, and testing stages to make the best use of the team’s skills and time. Also focused on managing resources effectively and finding ways to promote the project to attract additional sponsors and support.</p>  
+                            <ul>  
+                                <li>Coordinated project management for aircraft development.</li>  
+                                <li>Secured sponsorships and funding for the project.</li>  
+                                <li>Onboarded team members on weekly meetings.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+
+                    <!-- Sub-subtitle 2 -->  
+                    <h4>Aicraft Dimensioning & Aerodesign</h4>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="images/draft.png" alt="Aerodesign Image" class="image fit" />  
+                        </div>  
+                        <div class="col-8">  
+                            <p>Created the first draft of how aircraft would be sized, applying aeronautical fundamentals to ensure wing geometry generated the most lift. Iterated using XFLR5 to obtain the most efficient airfoil.</p>  
+                            <ul>  
+                                <li>Analyzed lift-to-drag ratio for optimal performance.</li>  
+                                <li>Tested multiple airfoil configurations in XFLR5.</li>  
+                                <li>Validated designs through simulation and prototyping.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+
+                    <!-- Sub-subtitle 3 -->  
+                    <h4>CAD Design for Additive Manufacturing</h4>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="images/wireframe.png" alt="CAD Design Image" class="image fit" />  
+                        </div>  
+                        <div class="col-8">  
+                            <p>Designed the aircraft in Solidworks, including wings, tail section, and fuselage. Due to the nature of 3D printing, internal wing geometry was manually designed and tested to reduce weight while ensuring structural integrity.</p>  
+                            <ul>  
+                                <li>Optimized designs for weight reduction.</li>  
+                                <li>Ensured manufacturability with 3D printing constraints.</li>  
+                                <li>Performed structural analysis on critical components.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+
+                    <!-- Sub-subtitle 4 -->  
+                    <h4>Slicer Fine-tuning</h4>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="images/slicer.png" alt="Slicer Fine-tuning Image" class="image fit" />  
+                                <!-- Video Section -->  
+                                <section class="center" style="margin-top: 50px; text-align: center;">  
+                                    <h3><strong>Video</strong></h3>  
+                                    <video controls style="margin: 0 auto; display: block; width: 100%;">  
+                                        <source src="images/impresionvideo.MP4" type="video/mp4">  
+                                        Your browser does not support the video tag.  
+                                    </video>  
+                                </section>  
+                        </div>  
+                        <div class="col-8">  
+                            <p>Fine-tuned slicer parameters to obtain the best quality prints, e.g., flow rate, layer height, seam position, travel and layer speed, etc.</p>  
+                            <ul>  
+                                <li>Adjusted print settings for optimal layer adhesion.</li>  
+                                <li>Reduced print time without compromising quality.</li>  
+                                <li>Resolved issues like warping and stringing.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>Results</strong></h3>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="images/results 2.jpg" alt="Design Performance Image" class="image fit" />  
+                        </div>  
+                        <div class="col-8">  
+                            <p>Areas our team performed specially well.</p>  
+                            <ul>  
+                                <li>Internal wing geometry provided the team with a significant advantage over competitors, thanks to the extensive effort and investment made in optimizing a design that achieved the ideal balance between structural integrity and weight.</li>  
+                                <li>Placement and routing design of carbon tubes proved to be an effective method for minimizing printed supports, thereby reducing the overall weight.</li>  
+                                <li>Due to adequate balancing, our aircraft was able to maintain flight.</li>  
+                                <li>Modular design allowed for fast field repairs and part replacement.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>Lessons learned & 2025</strong></h3>  
+                    <div class="row">  
+                        <div class="col-4">  
+                            <img src="images/DSC-22.jpg" alt="Flight Achievements Image" class="image fit" />  
+                        </div>  
+                        <div class="col-8">  
+                            <p>Highlights of the flight performance, showcasing the aircraft's capabilities and results achieved during the competition.</p>  
+                            <ul>  
+                                <li>Torque generated by motor to fuselage structure should not be dismissed due to it altering flight trajectory.</li>  
+                                <li>Increase margin of error to 10% on project timeline to ensure printing complications don’t delay necessary test flights.</li>  
+                                <li>Invest in learning to print LW-PLA, weight difference is abysmal (1.24 g/cm3 vs. 0.54 g/cm^3).</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+        </div>  
+    </article>  
+
+    <!-- Scripts -->  
+    <script src="assets/js/jquery.min.js"></script>  
+    <script src="assets/js/jquery.scrolly.min.js"></script>  
+    <script src="assets/js/browser.min.js"></script>  
+    <script src="assets/js/breakpoints.min.js"></script>  
+    <script src="assets/js/util.js"></script>  
+    <script src="assets/js/main.js"></script>  
+</body>  
 </html>
