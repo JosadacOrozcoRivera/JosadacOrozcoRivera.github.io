@@ -1,194 +1,345 @@
 <!DOCTYPE HTML>  
 <html>  
-	<head>  
-		<title>Project 2 - Details</title>  
-		<meta charset="utf-8" />  
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
-		<link rel="stylesheet" href="assets/css/main.css" />  
-		<style>  
-			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
-			p, ul li {  
-				text-align: left;  
-				color: black; /* Set text color to black */  
-			}  
+<head>  
+    <title>Project 2 - Details</title>  
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+    <link rel="stylesheet" href="assets/css/main.css" />  
+    <style>  
+        /* Estilos generales */  
+        p, ul li {  
+            text-align: left;  
+            color: black;  
+        }  
 
-			/* Ensure all text on the page is black */  
-			body {  
-				color: black;  
-			}  
+        body {  
+            color: black;  
+        }  
 
-			.center {  
-				text-align: center;  
-			}  
+        .center {  
+            text-align: center;  
+        }  
 
-			.image-large {  
-				display: block;  
-				margin: 20px auto;  
-				width: 80%; /* Ajusta el tamaño según sea necesario */  
-			}  
+        .image-large {  
+            display: block;  
+            margin: 20px auto;  
+            width: 80%;  
+        }  
 
-			/* Subtítulos principales (Description, My Contribution, Results) */  
-			h3 {  
-				font-size: 1.8em;  
-				font-weight: bold;  
-				color: black;  
-			}  
+        h3 {  
+            font-size: 1.8em;  
+            font-weight: bold;  
+            color: black;  
+            margin-bottom: 10px;  
+        }  
 
-			/* Espaciado extra entre imágenes y el siguiente contenido */  
-			.row img {  
-				margin-bottom: 30px;  
-			}  
+        .row img {  
+            margin-bottom: 30px;  
+        }  
 
-			/* Alineación horizontal entre texto e imágenes en las secciones */  
-			.row {  
-				display: flex;  
-				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
-			}  
+        .row {  
+            display: flex;  
+            align-items: flex-start;  
+        }  
 
-			.row img {  
-				position: relative;  
-				top: +10px; /* Subimos ligeramente la imagen para alinearla con el texto */  
-				margin: 0; /* Eliminamos márgenes externos */   
-			}  
+        .row img {  
+            position: relative;  
+            top: +10px;  
+            margin: 0;  
+        }  
 
-			/* Espaciado dentro de la sección */  
-			.row > .col-4, .row > .col-8 {  
-				padding: 10px;  
-			}  
+        .row > .col-4, .row > .col-8 {  
+            padding: 10px;  
+        }  
 
-			/* Cambios para hacer las imágenes 50% más grandes */  
-			.image.fit {  
-				max-width: 100%; /* Asegura que la imagen no exceda el contenedor */  
-				width: 150%; /* Escala las imágenes al 150% de su tamaño original */  
-				margin: 0 auto; /* Centra las imágenes horizontalmente */  
-				display: block; /* Se comporta como bloque */  
-			}  
-		</style>  
-	</head>  
-	<body class="is-preload">  
-		<!-- Nav -->  
-		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
-			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
-				<li style="margin-right: auto;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Josadac Orozco Rivera</a></li>  
-				<div style="display: flex; gap: 15px;"> <!-- Contenedor para los enlaces alineados a la derecha -->  
-					<li><a href="index.html#work" style="color: white; text-decoration: none; font-size: 1.2rem;">Projects</a></li>  
-					<li><a href="index.html#contact" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact Me</a></li>  
-					<li><a href="cv.html" style="color: white; text-decoration: none; font-size: 1.2rem;">CV</a></li>  
-				</div>  
-			</ul>  
-		</nav>    
-  
+        .image.fit {  
+            max-width: 100%;  
+            width: 150%;  
+            margin: 0 auto;  
+            display: block;  
+        }  
 
-		<!-- Project -->  
-		<article id="project1" class="wrapper style2">  
-			<div class="container">  
-				<header class="center">  
-					<h2>ARLISS Competition (2022,2023)</h2>  
-					<p style="text-align: center;">Black Rock Desert, NA</p>  
-				</header>  
+        /* Estilos para el menú desplegable */  
+        .dropdown {  
+            position: relative;  
+            display: inline-block;  
+        }  
 
-				<img src="images/arliss1.JPG" alt="Aircraft Image" class="image-large" />  
+        .dropdown-button {  
+            background-color: #222;  
+            color: white;  
+            padding: 10px;  
+            font-size: 1.2rem;  
+            border: none;  
+            cursor: pointer;  
+        }  
 
-				<!-- Subtitle 1 -->  
-				<section class="row center">  
-					<div class="col-12">  
-						<h3><strong>Description</strong></h3>  
-						<p>ARLISS is a competition that takes place in Black Rock, Nevada, where university students from around the world design, build, and launch prototypes of satellites. The category where I participated was CanSat Comeback Competition, where the goal is to make a lightweight, all terrain rover that that will be launch from a rocket and will be ejected at an altitude of 4 km. The robot has to autonomously deploy a parachute, land and travel the dessert to a specific GPS location.</p>  
-					</div>  
-				</section>  
+        .dropdown-content {  
+            display: none;  
+            position: absolute;  
+            background-color: #222;  
+            min-width: 160px;  
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+            z-index: 1;  
+        }  
 
-				<hr /> <!-- Línea divisora entre Description y My Contribution -->  
+        .dropdown-content a {  
+            color: white;  
+            padding: 12px 16px;  
+            text-decoration: none;  
+            display: block;  
+        }  
 
-				<!-- Subtitle 2 -->  
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>Mechanical Design Lead</strong></h3>  
+        .dropdown-content a:hover {  
+            background-color: #555;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/arliss_lead.JPEG" alt="Team Leader Image"  width="550" height="370" />  
-							</div>  
-							<div class="col-5">  
-								<p>Under the engineering student group "Quantum", I contributed to the project as the mechanical design lead, organizing project timeline and tasks while onboarding 5 team members with weekly meetings and tasks to perform. </p>  
-								<ul>  
-									<li>Design desicion making for chasis geometry and materials selection. </li>  
-									<li>Secured sponsorships and funding for the project.</li>  
-									<li>Onboarded team members on weekly meetings.</li>  
-								</ul>  
-							</div>  
-						</div>  
+        .dropdown:hover .dropdown-content {  
+            display: block;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/rover_render.jpg" alt="Aerodesign Image" class="image fit"  />  
-							</div>  
-							<div class="col-6">  
-								<p>Design & manufacture mechanical structure for rover, while taking into account strict  weight and sizing limitations. Structure needed to survive a 40g acceleration ,while protecting electronical components. Utilized CNC, miling and tuning to create 1060 alloy chassis</p>  
-								<ul>  
-									<li>Weight & size limitations were given by available payload volume of rocket and maximum launch weight.</li>  
-									<li>40g acceleration was excerted by payload separation explosion..</li>  
-									<li>Electrical components consistes of: </li>  
-								</ul>  
-							</div>  
-						</div>  
+        /* Estilos para la barra de navegación de escritorio */  
+        .navbar-desktop {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            height: 60px;  
+            background-color: #222;  
+            padding: 0 150px;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/arliss2.jpg" alt="CAD Design Image" width="590" height="470" />  
-							</div>  
-							<div class="col-6">  
-								<p>Design rover all-terrain wheels and coupling, for navigation of rough terrain in the BlackRock Desert, while taking into account the capacity to protect electronical components in a 10 foot free fall drop. Utilized CAD and laser cuter to achieve desired geometry.</p>  
-								<ul>  
-									<li>Wheels needed to be lightweight, shock absorbant and all terrian capable. Ethylene-vinyl acetate foam was chosen due to its properties and ease of manufacturability with laser cuter.</li>  
-									<li>In final landing touchdown, rover would suffer a 10 foot free fall to make sure parachute did not interfere with navigation.</li>  
-									
-								</ul>  
-							</div>  
-						</div>  
+        .navbar-desktop ul {  
+            display: flex;  
+            gap: 15px;  
+            width: 100%;  
+            align-items: center;  
+            margin: 0;  
+            list-style: none;  
+            padding: 0;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/arliss3.jpg" alt="Slicer Fine-tuning Image" class="image fit" />  
-							</div>  
-							<div class="col-6">  
-								<p>Design of auto-retractable stabilizing support for rover. Rover needed to have a stabilizing support that could be retracted and auto deployed when exiting payload bay. 
-								</p>  
-								
-							</div>  
-						</div>  
-					</div>  
-				</section>  
+        .navbar-desktop li {  
+            margin-right: auto;  
+        }  
 
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>Results</strong></h3>  
-						<div class="row">  
-							<div class="col-6">  
-								<!-- Reemplazamos la imagen con un elemento <video> -->  
-								<video width="550" height="370" controls>  
-									<source src="images/rovervideo.MP4" type="video/mp4">  
-									Your browser does not support the video tag.  
-								</video>  
-							</div>  
-							<div class="col-5">  
-								<p>Rover successfully survived launch, deployment and landing. All electronic components remained intact and wheels were able to navigate rough terrain. Below, some areas of improvement.</p>  
-								<ul>  
-									<li>More robust navigation system to ensure rover can identify waypoints correctly. </li>  
-									<li>Further testing of landing sequence to ensure parachute deploys before rover touchdown.</li>  
-								</ul>  
-							</div>  
-						</div>  
-					</div>  
-				</section> 
-			</div>  
-		</article>  
+        .navbar-desktop a {  
+            color: white;  
+            text-decoration: none;  
+            font-size: 1.2rem;  
+        }  
 
-		<!-- Scripts -->  
-		<script src="assets/js/jquery.min.js"></script>  
-		<script src="assets/js/jquery.scrolly.min.js"></script>  
-		<script src="assets/js/browser.min.js"></script>  
-		<script src="assets/js/breakpoints.min.js"></script>  
-		<script src="assets/js/util.js"></script>  
-		<script src="assets/js/main.js"></script>  
-	</body>  
+        /* Estilos para la barra de navegación móvil */  
+        .navbar-mobile {  
+            display: none;  
+            background-color: #222;  
+            padding: 10px;  
+            height: auto;  
+            justify-content: center;  
+            align-items: center;  
+        }  
+
+        /* Media Queries para móviles */  
+        @media (max-width: 768px) {  
+            /* Mostrar la barra de navegación móvil y fijarla en la parte superior */  
+            .navbar-mobile {  
+                display: flex;  
+                position: fixed; /* Fija la barra de navegación */  
+                top: 0;  
+                left: 0;  
+                width: 100%;  
+                z-index: 1000; /* Asegura que esté por encima de otros elementos */  
+                background-color: #222; /* Asegura que tenga un fondo sólido */  
+            }  
+
+            /* Ocultar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: none;  
+            }  
+        
+            /* Estilos para la disposición original de imágenes y texto */  
+            .row {  
+                flex-direction: column;  
+            }  
+
+            .row img {  
+                width: 100%;  
+                height: auto;  
+                top: 0;  
+                margin-bottom: 30px;  
+                margin-top: 30px;  
+            }  
+
+            .row > .col-4, .row > .col-5, .row > .col-6, .row > .col-8, .row > .col-12 {  
+                width: 100%;  
+                padding: 10px; /* Añadido padding para dar espacio a los lados */  
+            }  
+
+            .image-large {  
+                width: 100%;  
+            }  
+
+            p, ul {  
+                margin: 10px 0;  
+                word-wrap: break-word; /* Asegura que las palabras largas no se salgan del contenedor */  
+            }  
+
+            h3 {  
+                font-size: 1.5em;  
+                margin-bottom: 30px;  
+            }  
+
+            /* Ajustar el padding-top del body para que el contenido no quede oculto */  
+            body {  
+                padding-top: 50px; /* Ajustar según la altura de la barra de navegación */  
+                box-sizing: border-box;  
+            }  
+        }  
+
+        /* Estilos para la versión de escritorio */  
+        @media (min-width: 769px) {  
+            /* Mostrar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: flex;  
+            }  
+
+            /* Ocultar la barra de navegación móvil */  
+            .navbar-mobile {  
+                display: none;  
+            }  
+        }  
+    </style>  
+</head>  
+<body class="is-preload">  
+    <!-- Nav para escritorio -->  
+    <nav id="nav" class="navbar-desktop">  
+        <ul>  
+            <li style="margin-right: auto;"><a href="index.html">Josadac Orozco Rivera</a></li>  
+            <div style="display: flex; gap: 15px;">  
+                <li><a href="index.html#work">Projects</a></li>  
+                <li><a href="index.html#contact">Contact Me</a></li>  
+                <li><a href="cv.html">CV</a>  
+            </div>  
+        </ul>  
+    </nav>  
+
+    <!-- Nav para móviles -->  
+    <nav class="navbar-mobile">  
+        <div class="dropdown">  
+            <button class="dropdown-button">Menú</button>  
+            <div class="dropdown-content">  
+                <a href="index.html">Home</a>  
+                <a href="index.html#work">Projects</a>  
+                <a href="index.html#contact">Contact Me</a>  
+                <a href="cv.html">CV</a>  
+            </div>  
+        </div>  
+    </nav>  
+
+    <!-- Project -->  
+    <article id="project1" class="wrapper style2">  
+        <div class="container">  
+            <header class="center">  
+                <h2>ARLISS Competition (2022,2023)</h2>  
+                <p style="text-align: center;">Black Rock Desert, NA</p>  
+            </header>  
+
+            <img src="images/arliss1.JPG" alt="Aircraft Image" class="image-large" />  
+
+            <!-- Subtitle 1 -->  
+            <section class="row center">  
+                <div class="col-12">  
+                    <h3><strong>Description</strong></h3>  
+                    <p>ARLISS is a competition that takes place in Black Rock, Nevada, where university students from alrededor del mundo diseñan, construyen y lanzan prototipos de satélites. La categoría en la que participé fue la Competencia CanSat Comeback, cuyo objetivo es hacer un rover ligero y todoterreno que se lanzará desde un cohete y será expulsado a una altitud de 4 km. El robot debe desplegar un paracaídas de forma autónoma, aterrizar y recorrer el desierto hasta un lugar GPS específico.</p>  
+                </div>  
+            </section>  
+
+            <hr />  
+
+            <!-- Subtitle 2 -->  
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>Mechanical Design Lead</strong></h3>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/arliss_lead.JPEG" alt="Team Leader Image" width="550" height="370" />  
+                        </div>  
+                        <div class="col-5">  
+                            <p>Under the engineering student group "Quantum", I contributed to the project as the mechanical design lead, organizing project timeline and tasks while onboarding 5 team members with weekly meetings and tasks to perform.</p>  
+                            <ul>  
+                                <li>Design decision making for chassis geometry and materials selection.</li>  
+                                <li>Secured sponsorships and funding for the project.</li>  
+                                <li>Onboarded team members on weekly meetings.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/rover_render.jpg" alt="Aerodesign Image" class="image fit" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p>Design & manufacture mechanical structure for rover, while taking into account strict weight and sizing limitations. Structure needed to survive a 40g acceleration, while protecting electronic components. Utilized CNC, milling and tuning to create 1060 alloy chassis.</p>  
+                            <ul>  
+                                <li>Weight & size limitations were given by available payload volume of rocket and maximum launch weight.</li>  
+                                <li>40g acceleration was exerted by payload separation explosion.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/arliss2.jpg" alt="CAD Design Image" width="590" height="470" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p>Design rover all-terrain wheels and coupling, for navigation of rough terrain in the BlackRock Desert, while taking into account the capacity to protect electronic components in a 10-foot free fall drop. Utilized CAD and laser cutter to achieve desired geometry.</p>  
+                            <ul>  
+                                <li>Wheels needed to be lightweight, shock absorbent and all-terrain capable. Ethylene-vinyl acetate foam was chosen due to its properties and ease of manufacturability with laser cutter.</li>  
+                                <li>In final landing touchdown, rover would suffer a 10-foot free fall to ensure the parachute did not interfere with navigation.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/arliss3.jpg" alt="Slicer Fine-tuning Image" class="image fit" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p>Design of auto-retractable stabilizing support for rover. Rover needed to have a stabilizing support that could be retracted and auto deployed when exiting the payload bay.</p>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>Results</strong></h3>  
+                    <div class="row">  
+                        <div class="col-6">  
+                            <video width="550" height="370" controls>  
+                                <source src="images/rovervideo.MP4" type="video/mp4">  
+                                Your browser does not support the video tag.  
+                            </video>  
+                        </div>  
+                        <div class="col-5">  
+                            <p>Rover successfully survived launch, deployment, and landing. All electronic components remained intact and wheels were able to navigate rough terrain. Below, some areas of improvement.</p>  
+                            <ul>  
+                                <li>More robust navigation system to ensure rover can identify waypoints correctly.</li>  
+                                <li>Further testing of landing sequence to ensure parachute deploys before rover touchdown.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+        </div>  
+    </article>  
+
+    <!-- Scripts -->  
+    <script src="assets/js/jquery.min.js"></script>  
+    <script src="assets/js/jquery.scrolly.min.js"></script>  
+    <script src="assets/js/browser.min.js"></script>  
+    <script src="assets/js/breakpoints.min.js"></script>  
+    <script src="assets/js/util.js"></script>  
+    <script src="assets/js/main.js"></script>  
+</body>  
 </html>
