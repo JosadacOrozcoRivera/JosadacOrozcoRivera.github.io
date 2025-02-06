@@ -1,170 +1,337 @@
 <!DOCTYPE HTML>  
 <html>  
-	<head>  
-		<title>Project 2 - Details</title>  
-		<meta charset="utf-8" />  
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
-		<link rel="stylesheet" href="assets/css/main.css" />  
-		<style>  
-			/* Alineación a la izquierda de todos los párrafos y subsubtítulos */  
-			p, ul li {  
-				text-align: left;  
-				color: black; /* Set text color to black */  
-			}  
+<head>  
+    <title>Project 3 - Details</title>  
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />  
+    <link rel="stylesheet" href="assets/css/main.css" />  
+    <style>  
+        /* Estilos generales */  
+        p, ul li {  
+            text-align: left;  
+            color: black;  
+        }  
 
-			/* Ensure all text on the page is black */  
-			body {  
-				color: black;  
-			}  
+        body {  
+            color: black;  
+        }  
 
-			.center {  
-				text-align: center;  
-			}  
+        .center {  
+            text-align: center;  
+        }  
 
-			.image-large {  
-				display: block;  
-				margin: 20px auto;  
-				width: 80%; /* Ajusta el tamaño según sea necesario */  
-			}  
+        .image-large {  
+            display: block;  
+            margin: 20px auto;  
+            width: 80%;  
+        }  
 
-			/* Subtítulos principales (Description, My Contribution, Results) */  
-			h3 {  
-				font-size: 1.8em;  
-				font-weight: bold;  
-				color: black;  
-			}  
+        h3 {  
+            font-size: 1.8em;  
+            font-weight: bold;  
+            color: black;  
+        }  
 
-			/* Espaciado extra entre imágenes y el siguiente contenido */  
-			.row img {  
-				margin-bottom: 30px;  
-			}  
+        .row img {  
+            margin-bottom: 30px;  
+        }  
 
-			/* Alineación horizontal entre texto e imágenes en las secciones */  
-			.row {  
-				display: flex;  
-				align-items: flex-start; /* Alinear imagen y texto en la parte superior */  
-			}  
+        .row {  
+            display: flex;  
+            align-items: flex-start;  
+            flex-wrap: wrap;  
+        }  
 
-			.row img {  
-				position: relative;  
-				top: +10px; /* Subimos ligeramente la imagen para alinearla con el texto */  
-				margin: 0; /* Eliminamos márgenes externos */   
-			}  
+        .row img {  
+            position: relative;  
+            top: +10px;  
+            margin: 0;  
+        }  
 
-			/* Espaciado dentro de la sección */  
-			.row > .col-4, .row > .col-8 {  
-				padding: 10px;  
-			}  
+        .row > .col-6 {  
+            padding: 10px;  
+            box-sizing: border-box;  
+        }  
 
-			/* Cambios para hacer las imágenes 50% más grandes */  
-			.image.fit {  
-				max-width: 100%; /* Asegura que la imagen no exceda el contenedor */  
-				width: 150%; /* Escala las imágenes al 150% de su tamaño original */  
-				margin: 0 auto; /* Centra las imágenes horizontalmente */  
-				display: block; /* Se comporta como bloque */  
-			}  
-		</style>  
-	</head>  
-	<body class="is-preload">  
-		<!-- Nav -->  
-		<nav id="nav" style="display: flex; justify-content: space-between; align-items: center; height: 60px; background-color: #222; padding: 0 150px;">  
-			<ul class="container" style="display: flex; gap: 15px; width: 100%; align-items: center; margin: 0; list-style: none; padding: 0;">  
-				<li style="margin-right: auto;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Josadac Orozco Rivera</a></li>  
-				<div style="display: flex; gap: 15px;"> <!-- Contenedor para los enlaces alineados a la derecha -->  
-					<li><a href="index.html#work" style="color: white; text-decoration: none; font-size: 1.2rem;">Projects</a></li>  
-					<li><a href="index.html#contact" style="color: white; text-decoration: none; font-size: 1.2rem;">Contact Me</a></li>  
-					<li><a href="cv.html" style="color: white; text-decoration: none; font-size: 1.2rem;">CV</a></li>  
-				</div>  
-			</ul>  
-		</nav>    
- 
+        .image.fit {  
+            max-width: 100%;  
+            width: 150%;  
+            margin: 0 auto;  
+            display: block;  
+        }  
 
-		<!-- Project -->  
-		<article id="project1" class="wrapper style2">  
-			<div class="container">  
-				<header class="center">  
-					<h2>High Power Rocket Development for Tripolli Certification (2023)</h2>  
-					<p style="text-align: center;">Laguna Salada, B.C., Mx.</p>  
-				</header>  
+        /* Estilos para el menú desplegable */  
+        .dropdown {  
+            position: relative;  
+            display: inline-block;  
+        }  
 
-				<img src="images/rocket2.JPEG" alt="Aircraft Image" class="image-large" />  
+        .dropdown-button {  
+            background-color: #222;  
+            color: white;  
+            padding: 10px;  
+            font-size: 1.2rem;  
+            border: none;  
+            cursor: pointer;  
+        }  
 
-				<!-- Subtitle 1 -->  
-				<section class="row center">  
-					<div class="col-12">  
-						<h3><strong>Description</strong></h3>  
-						<p>ARLISS is a competition that takes place in Black Rock, Nevada, where university students from around the world design, build, and launch prototypes of satellites. The category where I participated was CanSat Comeback Competition, where the goal is to make a lightweight, all terrain rover that that will be launch from a rocket and will be ejected at an altitude of 4 km. The robot has to autonomously deploy a parachute, land and travel the dessert to a specific GPS location.</p>  
-					</div>  
-				</section>  
+        .dropdown-content {  
+            display: none;  
+            position: absolute;  
+            background-color: #222;  
+            min-width: 160px;  
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+            z-index: 1;  
+        }  
 
-				<hr /> <!-- Línea divisora entre Description y My Contribution -->  
+        .dropdown-content a {  
+            color: white;  
+            padding: 12px 16px;  
+            text-decoration: none;  
+            display: block;  
+        }  
 
-				<!-- Subtitle 2 -->  
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>My Contribution</strong></h3>  
+        .dropdown-content a:hover {  
+            background-color: #555;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/openrocket.png" alt="Team Leader Image"  width="590" height="370" />  
-							</div>  
-							<div class="col-6">  
-								<p>Under the engineering student group "Quantum", I contributed to the project as a team member in researching, testing and implementing the necessary manufacturing techniques to construct and assemble a glass reinforced epoxy rocket.</p>  
-								<p>Design through OpenRocket software for calculating center of mass, center of pressure, weight distribution, motor selection and conducting flight simulations to ensure a stable launch and landing.</p>  
-							</div>  
-						</div>  
+        .dropdown:hover .dropdown-content {  
+            display: block;  
+        }  
 
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/rocket4.png" alt="Aerodesign Image" class="image fit"  />  
-							</div>  
-							<div class="col-6">  
-								<p>Through a process of trial and error, I was able to identify certain deficiencies in the manufacturing process and successfully proposed and implemented changes to mitigate them.</p>  
-							</div>  
-						</div>  
+        /* Estilos para la barra de navegación de escritorio */  
+        .navbar-desktop {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            height: 60px;  
+            background-color: #222;  
+            padding: 0 150px;  
+        }  
 
-					</div>  
-				</section>  
+        .navbar-desktop ul {  
+            display: flex;  
+            gap: 15px;  
+            width: 100%;  
+            align-items: center;  
+            margin: 0;  
+            list-style: none;  
+            padding: 0;  
+        }  
 
-				<section class="row">  
-					<div class="col-12">  
-						<h3><strong>Results</strong></h3>  
-						<div class="row">  
-							<div class="col-6">  
-								<img src="images/rocket_results.png" alt="CAD Design Image" width="590" height="470" />  
-							</div>  
-							<div class="col-6">  
-								<p><strong>Success!</strong> The launch took place over laguna salada in Mexicali, B.C, Mexico. The flight passed with flying colors all certification criteria established by Tripolli Rocketry Association.</p>  
-								<ul>   
-									<li>Rocket didnt explode. Happens more often than one might think. If materials are not chosen correctly for sustaining high pressure and heat generated by motor ingition, the rocket would most likely explode.</li>   
-									<li>Flight trayectory. Flight path needed to be straight up, no sudden turns or trayectory changes. This meant a good fin design and adequate CM and CP. </li>  
-									<li>Correct flight path and parachute deployment.. Parachute needed to be deployed at periapsis and not be burned by motor heat. If prarachute deployed too early it would most likely brake. If deployed too late, it wouldnt slow down rocket trayectory enough and would most likely result in a complete loss of the rocket.</li>   
-									  
-								</ul>  
-							</div>  
-						</div>  
-				</section>  
+        .navbar-desktop li {  
+            margin-right: auto;  
+        }  
 
-				<!-- Video Section at the Bottom -->  
-				<section class="row center" style="margin-top: 50px; text-align: center;">  
-					<div class="col-12">  
-						<h3><strong>Video</strong></h3>  
-						<video controls style="margin: 0 auto; display: block; width: 30%;">  
-							<source src="videos/launch.MP4" type="video/mp4">  
-							Your browser does not support the video tag.  
-						</video>  
-					</div>  
-				</section>  
+        .navbar-desktop a {  
+            color: white;  
+            text-decoration: none;  
+            font-size: 1.2rem;  
+        }  
 
-			</div>  
-		</article>  
+        /* Estilos para la barra de navegación móvil */  
+        .navbar-mobile {  
+            display: none;  
+            background-color: #222;  
+            padding: 10px;  
+            height: auto;  
+            justify-content: center;  
+            align-items: center;  
+        }  
 
-		<!-- Scripts -->  
-		<script src="assets/js/jquery.min.js"></script>  
-		<script src="assets/js/jquery.scrolly.min.js"></script>  
-		<script src="assets/js/browser.min.js"></script>  
-		<script src="assets/js/breakpoints.min.js"></script>  
-		<script src="assets/js/util.js"></script>  
-		<script src="assets/js/main.js"></script>  
-	</body>  
+        /* Media Queries para móviles */  
+        @media (max-width: 768px) {  
+            /* Mostrar la barra de navegación móvil */  
+            .navbar-mobile {  
+                display: flex;  
+                position: fixed; /* Fixed position */  
+                top: 0; /* Stick to the top */  
+                left: 0;  
+                width: 100%;  
+                z-index: 1000; /* Ensure it stays on top */  
+            }  
+
+            /* Ocultar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: none;  
+            }  
+
+            /* Cambiar la dirección de las filas a vertical */  
+            .row {  
+                flex-direction: column;  
+            }  
+
+            /* Imágenes ocupan el 100% del ancho */  
+            .row img {  
+                width: 100%;  
+                height: auto;  
+                top: 0;  
+                margin-bottom: 30px;  
+                margin-top: 30px;  
+            }  
+
+            /* Texto se coloca debajo de las imágenes */  
+            .row > .col-6 {  
+                width: 100%;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            /* Ajuste de la imagen principal */  
+            .image-large {  
+                width: 100%;  
+            }  
+
+            /* Mejora la distribución del texto */  
+            p, ul {  
+                margin: 10px 0;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            h3 {  
+                font-size: 1.5em;  
+                margin-bottom: 50px;  
+                padding: 0 15px; /* Añadido padding horizontal */  
+                box-sizing: border-box; /* Asegura que el padding se incluye en el ancho */  
+            }  
+
+            /* Ajuste para el video en versión móvil */  
+            video {  
+                width: 100% !important;  
+            }  
+
+            /* Ajuste para el contenido debajo de la barra de navegación fija */  
+            body {  
+                padding-top: 50px; /* Ajustar según la altura de la barra de navegación */  
+                box-sizing: border-box;  
+            }  
+        }  
+
+        /* Estilos para la versión de escritorio */  
+        @media (min-width: 769px) {  
+            /* Mostrar la barra de navegación de escritorio */  
+            .navbar-desktop {  
+                display: flex;  
+            }  
+
+            /* Ocultar la barra de navegación móvil */  
+            .navbar-mobile {  
+                display: none;  
+            }  
+        }  
+    </style>  
+</head>  
+<body class="is-preload">  
+    <!-- Nav para escritorio -->  
+    <nav id="nav" class="navbar-desktop">  
+        <ul>  
+            <li style="margin-right: auto;"><a href="index.html">Josadac Orozco Rivera</a></li>  
+            <div style="display: flex; gap: 15px;">  
+                <li><a href="index.html#work">Projects</a></li>  
+                <li><a href="index.html#contact">Contact Me</a></li>  
+                <li><a href="cv.html">CV</a></li>  
+            </div>  
+        </ul>  
+    </nav>  
+
+    <!-- Nav para móviles -->  
+    <nav class="navbar-mobile">  
+        <div class="dropdown">  
+            <button class="dropdown-button">Menú</button>  
+            <div class="dropdown-content">  
+                <a href="index.html">Home</a>  
+                <a href="index.html#work">Projects</a>  
+                <a href="index.html#contact">Contact Me</a>  
+                <a href="cv.html">CV</a>  
+            </div>  
+        </div>  
+    </nav>  
+
+    <!-- Project -->  
+    <article id="project1" class="wrapper style2">  
+        <div class="container">  
+            <header class="center">  
+                <h2>High Power Rocket Development for Tripolli Certification (2023)</h2>  
+                <p style="text-align: center;">Laguna Salada, B.C., Mx.</p>  
+            </header>  
+
+            <img src="images/rocket2.JPEG" alt="Aircraft Image" class="image-large" />  
+
+            <!-- Subtitle 1 -->  
+            <section class="row center">  
+                <div class="col-12">  
+                    <h3><strong>Description</strong></h3>  
+                    <p>ARLISS is a competition that takes place in Black Rock, Nevada, where university students from around the world design, build, and launch prototypes of satellites. The category where I participated was CanSat Comeback Competition, where the goal is to make a lightweight, all terrain rover that that will be launch from a rocket and will be ejected at an altitude of 4 km. The robot has to autonomously deploy a parachute, land and travel the dessert to a specific GPS location.</p>  
+                </div>  
+            </section>  
+
+            <hr />  
+
+            <!-- Subtitle 2 -->  
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>My Contribution</strong></h3>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/openrocket.png" alt="Team Leader Image" width="590" height="370" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p>Under the engineering student group "Quantum", I contributed to the project as a team member in researching, testing and implementing the necessary manufacturing techniques to construct and assemble a glass reinforced epoxy rocket.</p>  
+                            <p>Design through OpenRocket software for calculating center of mass, center of pressure, weight distribution, motor selection and conducting flight simulations to ensure a stable launch and landing.</p>  
+                        </div>  
+                    </div>  
+
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/rocket4.png" alt="Aerodesign Image" class="image fit" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p>Through a process of trial and error, I was able to identify certain deficiencies in the manufacturing process and successfully proposed and implemented changes to mitigate them.</p>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <section class="row">  
+                <div class="col-12">  
+                    <h3><strong>Results</strong></h3>  
+                    <div class="row">  
+                        <div class="col-6">  
+                            <img src="images/rocket_results.png" alt="CAD Design Image" width="590" height="470" />  
+                        </div>  
+                        <div class="col-6">  
+                            <p><strong>Success!</strong> The launch took place over laguna salada in Mexicali, B.C, Mexico. The flight passed with flying colors all certification criteria established by Tripolli Rocketry Association.</p>  
+                            <ul>  
+                                <li>Rocket didn't explode. Happens more often than one might think. If materials are not chosen correctly for sustaining high pressure and heat generated by motor ignition, the rocket would most likely explode.</li>  
+                                <li>Flight trajectory. Flight path needed to be straight up, no sudden turns or trajectory changes. This meant a good fin design and adequate CM and CP. </li>  
+                                <li>Correct flight path and parachute deployment. Parachute needed to be deployed at periapsis and not be burned by motor heat. If parachute deployed too early it would most likely brake. If deployed too late, it wouldn't slow down rocket trajectory enough and would most likely result in a complete loss of the rocket.</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <!-- Video Section at the Bottom -->  
+            <section class="row center" style="margin-top: 50px; text-align: center;">  
+                <div class="col-12">  
+                    <h3><strong>Video</strong></h3>  
+                    <video controls style="margin: 0 auto; display: block; width: 30%;">  
+                        <source src="videos/launch.MP4" type="video/mp4">  
+                        Your browser does not support the video tag.  
+                    </video>  
+                </div>  
+            </section>  
+        </div>  
+    </article>  
+
+    <!-- Scripts -->  
+    <script src="assets/js/jquery.min.js"></script>  
+    <script src="assets/js/jquery.scrolly.min.js"></script>  
+    <script src="assets/js/browser.min.js"></script>  
+    <script src="assets/js/breakpoints.min.js"></script>  
+    <script src="assets/js/util.js"></script>  
+    <script src="assets/js/main.js"></script>  
+</body>  
 </html>
